@@ -1,0 +1,146 @@
+Brant
+Canada Goose
+Mute Swan
+American Black Duck
+Bufflehead
+Gadwall
+Hooded Merganser
+Mallard
+Northern Shoveler
+Red-breasted Merganser
+Ruddy Duck
+Wood Duck
+Pied-billed Grebe
+Mourning Dove
+Rock Pigeon (feral)
+Black-billed Cuckoo
+Yellow-billed Cuckoo
+Common Nighthawk
+Chimney Swift
+Ruby-throated Hummingbird
+American Coot
+American Woodcock
+Killdeer
+Least Sandpiper
+Semipalmated Sandpiper
+Solitary Sandpiper
+Spotted Sandpiper
+Great Black-backed Gull
+Herring Gull
+Laughing Gull
+Ring-billed Gull
+Common Tern
+Common Loon
+Red-throated Loon
+Double-crested Cormorant
+Great Cormorant
+Black-crowned Night Heron
+Great Blue Heron
+Great Egret
+Green Heron
+Snowy Egret
+Yellow-crowned Night Heron
+Turkey Vulture
+Bald Eagle
+Broad-winged Hawk
+Cooper's Hawk
+Osprey
+Red-shouldered Hawk
+Red-tailed Hawk
+Sharp-shinned Hawk
+Belted Kingfisher
+Downy Woodpecker
+Hairy Woodpecker
+Northern Flicker
+Red-bellied Woodpecker
+Yellow-bellied Sapsucker
+American Kestrel
+Merlin
+Peregrine Falcon
+Eastern Kingbird
+Eastern Phoebe
+Eastern Wood-Pewee
+Great Crested Flycatcher
+Least Flycatcher
+Yellow-bellied Flycatcher
+Blue-headed Vireo
+Red-eyed Vireo
+Warbling Vireo
+Yellow-throated Vireo
+American Crow
+Blue Jay
+Common Raven
+Fish Crow
+Black-capped Chickadee
+Tufted Titmouse
+Barn Swallow
+Northern Rough-winged Swallow
+Tree Swallow
+Golden-crowned Kinglet
+Ruby-crowned Kinglet
+Red-breasted Nuthatch
+White-breasted Nuthatch
+Brown Creeper
+Blue-gray Gnatcatcher
+Carolina Wren
+Winter Wren
+House Wren
+European Starling
+American Robin
+Gray-cheeked Thrush
+Hermit Thrush
+Swainson's Thrush
+Veery
+Wood Thrush
+Cedar Waxwing
+House Sparrow
+American Goldfinch
+House Finch
+Purple Finch
+Chipping Sparrow
+Dark-eyed Junco
+Field Sparrow
+Fox Sparrow
+Eastern Towhee
+Lincoln's Sparrow
+Savannah Sparrow
+Song Sparrow
+Swamp Sparrow
+White-crowned Sparrow
+White-throated Sparrow
+Baltimore Oriole
+Brown-headed Cowbird
+Common Grackle
+Orchard Oriole
+Red-winged Blackbird
+Rusty Blackbird
+American Redstart
+Bay-breasted Warbler
+Black-and-white Warbler
+Black-throated Blue Warbler
+Black-throated Green Warbler
+Blackburnian Warbler
+Blackpoll Warbler
+Blue-winged Warbler
+Cape May Warbler
+Canada Warbler
+Common Yellowthroat
+Chestnut-sided Warbler
+Louisiana Waterthrush
+Magnolia Warbler
+Nashville Warbler
+Northern Parula
+Northern Waterthrush
+Ovenbird
+Palm Warbler
+Pine Warbler
+Prairie Warbler
+Tennessee Warbler
+Wilson's Warbler
+Worm-eating Warbler
+Yellow Warbler
+Yellow-rumped Warbler
+Indigo Bunting
+Northern Cardinal
+Rose-breasted Grosbeak
+Scarlet Tanager

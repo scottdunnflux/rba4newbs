@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhattan Bird Alerts for Newbs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .ios-button {
+      background-color: #007aff;
+      color: white;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+    .ios-button:hover {
+      background-color: #0062cc;
+    }
+    .ios-button.outline {
+      background-color: transparent;
+      color: #007aff;
+      border: 1px solid #007aff;
+    }
+    .ios-input {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 10px 12px;
+      width: 100%;
+    }
+    .ios-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      background-color: white;
+      overflow: hidden;
+    }
+    .ios-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 14px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .ios-chip.primary {
+      background-color: #e6f2ff;
+      color: #007aff;
+    }
+    .ios-chip.danger {
+      background-color: #ffe6e6;
+      color: #ff3b30;
+    }
+    .ios-list-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .ios-list-item:last-child {
+      border-bottom: none;
+    }
+    .loading-spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(0, 122, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #007aff;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div id="app"></div>
+
+  <script type="text/babel">
+    // Data loading hook
+    function useDataLoader() {
+      const [dataState, setDataState] = React.useState({
+        birdSpecies: [],
+        commonBirds: [],
+        hotspots: [],
+        isLoading: true,
+        error: null
+      });
+
+      React.useEffect(() => {
+        async function loadData() {
+          try {
+            // Load hotspots from david-barret-hot-spots.json
+            let hotspots = [];
+            try {
+              const hotspotsResponse = await fetch('./data/david-barret-hot-spots.json');
+              if (!hotspotsResponse.ok) throw new Error('Failed to load hotspots data');
+              const hotspotsData = await hotspotsResponse.json();
+              
+              // Check if the data is an object with a hotspots property
+              if (hotspotsData && typeof hotspotsData === 'object' && Array.isArray(hotspotsData.hotspots)) {
+                hotspots = hotspotsData.hotspots;
+                console.log('Extracted hotspots array from object:', hotspots.length);
+              } 
+              // Check if the data is already an array
+              else if (Array.isArray(hotspotsData)) {
+                hotspots = hotspotsData;
+                console.log('Hotspots data is already an array:', hotspots.length);
+              } 
+              // Neither format is valid, log the issue
+              else {
+                console.error('Hotspots data is not in expected format:', hotspotsData);
+                hotspots = [];
+              }
+            } catch (hotspotsError) {
+              console.error('Error loading hotspots:', hotspotsError);
+              hotspots = [];
+            }
+            
+            // Load bird species from nyc-species.json
+            const speciesResponse = await fetch('./data/nyc-species.json');
+            if (!speciesResponse.ok) throw new Error('Failed to load bird species data');
+            const speciesData = await speciesResponse.json();
+            
+            // Extract common names from the species data
+            const birdSpecies = speciesData.map(bird => bird.common_name);
+            
+            // Load common birds from common-birds.txt
+            const commonBirdsResponse = await fetch('./data/common-birds.txt');
+            if (!commonBirdsResponse.ok) throw new Error('Failed to load common birds data');
+            const commonBirdsText = await commonBirdsResponse.text();
+            
+            // Parse the text file - each bird is on a new line
+            const commonBirds = commonBirdsText
+              .split('\n')
+              .filter(line => line.trim() !== '');
+            
+            setDataState({
+              birdSpecies,
+              commonBirds,
+              hotspots,
+              isLoading: false,
+              error: null
+            });
+          } catch (error) {
+            console.error('Error loading data:', error);
+            setDataState(prevState => ({
+              ...prevState,
+              isLoading: false,
+              error: error.message
+            }));
+          }
+        }
+        
+        loadData();
+      }, []);
+      
+      return dataState;
+    }
+
+    // Main App Component
+    function App() {
+      const [currentPage, setCurrentPage] = React.useState('species');
+      const [selectedSpecies, setSelectedSpecies] = React.useState([]);
+      const [selectedLocation, setSelectedLocation] = React.useState(null);
+      const { birdSpecies, commonBirds, hotspots, isLoading, error } = useDataLoader();
+
+      // Navigation functions
+      const goToSpeciesPage = () => setCurrentPage('species');
+      const goToLocationPage = () => setCurrentPage('location');
+      const goToAlertPage = () => setCurrentPage('alert');
+
+      // Loading screen
+      if (isLoading) {
+        return (
+          <div className="max-w-md mx-auto bg-white min-h-screen">
+            <header className="bg-blue-500 text-white p-4 text-center">
+              <h1 className="text-xl font-bold">Manhattan Bird Alerts for Newbs</h1>
+            </header>
+            <main className="p-4 flex flex-col items-center justify-center" style={{ minHeight: 'calc(100vh - 64px)' }}>
+              <div className="loading-spinner" style={{ width: '40px', height: '40px', marginBottom: '16px' }}></div>
+              <p className="text-lg">Loading bird data...</p>
+            </main>
+          </div>
+        );
+      }
+
+      // Error screen
+      if (error) {
+        return (
+          <div className="max-w-md mx-auto bg-white min-h-screen">
+            <header className="bg-blue-500 text-white p-4 text-center">
+              <h1 className="text-xl font-bold">Manhattan Bird Alerts for Newbs</h1>
+            </header>
+            <main className="p-4">
+              <div className="bg-red-100 text-red-700 p-4 rounded-lg">
+                <h2 className="text-lg font-bold mb-2">Error Loading Data</h2>
+                <p>{error}</p>
+                <p className="mt-2">Please check that all data files are in the correct location:</p>
+                <ul className="list-disc ml-5 mt-2">
+                  <li>data/nyc-species.json</li>
+                  <li>data/common-birds.txt</li>
+                  <li>data/david-barret-hot-spots.json</li>
+                </ul>
+                <button 
+                  className="ios-button mt-4"
+                  onClick={() => window.location.reload()}
+                >
+                  Retry
+                </button>
+              </div>
+            </main>
+          </div>
+        );
+      }
+
+      // Render the current page
+      const renderPage = () => {
+        switch(currentPage) {
+          case 'species':
+            return (
+              <SpeciesPage 
+                birdSpecies={birdSpecies}
+                commonBirds={commonBirds}
+                selectedSpecies={selectedSpecies} 
+                setSelectedSpecies={setSelectedSpecies} 
+                onNext={goToLocationPage} 
+              />
+            );
+          case 'location':
+            return (
+              <LocationPage 
+                hotspots={hotspots || []} // Ensure hotspots is always an array
+                selectedLocation={selectedLocation} 
+                setSelectedLocation={setSelectedLocation} 
+                onBack={goToSpeciesPage}
+                onNext={goToAlertPage}
+              />
+            );
+          case 'alert':
+            return (
+              <AlertPage 
+                selectedSpecies={selectedSpecies} 
+                selectedLocation={selectedLocation} 
+                onBack={goToLocationPage}
+              />
+            );
+          default:
+            return <SpeciesPage />;
+        }
+      };
+
+      return (
+        <div className="max-w-md mx-auto bg-white min-h-screen">
+          <header className="bg-blue-500 text-white p-4 text-center">
+            <h1 className="text-xl font-bold">Manhattan Bird Alerts for Newbs</h1>
+          </header>
+          <main className="p-4">
+            {renderPage()}
+          </main>
+        </div>
+      );
+    }
+
+    // Species Page Component
+    function SpeciesPage({ birdSpecies = [], commonBirds = [], selectedSpecies = [], setSelectedSpecies, onNext }) {
+      const [searchText, setSearchText] = React.useState('');
+      const [searchResults, setSearchResults] = React.useState([]);
+
+      // Handle search input change
+      React.useEffect(() => {
+        if (!searchText || searchText.length < 2) {
+          setSearchResults([]);
+          return;
+        }
+
+        const lowerSearchText = searchText.toLowerCase();
+        const results = birdSpecies
+          .filter(species => species.toLowerCase().includes(lowerSearchText))
+          .slice(0, 10); // Limit to 10 results
+
+        setSearchResults(results);
+      }, [searchText, birdSpecies]);
+
+      // Add a species to the selected list
+      const addSpecies = (name) => {
+        const isCommon = commonBirds.includes(name);
+        setSelectedSpecies([...selectedSpecies, { name, isCommon }]);
+        setSearchText('');
+        setSearchResults([]);
+      };
+
+      // Remove a species from the selected list
+      const removeSpecies = (index) => {
+        const updatedSpecies = [...selectedSpecies];
+        updatedSpecies.splice(index, 1);
+        setSelectedSpecies(updatedSpecies);
+      };
+
+      // Clear all selected species
+      const clearList = () => {
+        setSelectedSpecies([]);
+      };
+
+      return (
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Step 1: Enter Bird Species</h2>
+          
+          <div className="mb-4">
+            <input
+              type="text"
+              className="ios-input"
+              placeholder="Type species name..."
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+          </div>
+          
+          {searchResults.length > 0 && (
+            <div className="ios-card mb-4">
+              {searchResults.map((result, index) => (
+                <div 
+                  key={index} 
+                  className="ios-list-item cursor-pointer hover:bg-gray-50"
+                  onClick={() => addSpecies(result)}
+                >
+                  {result}
+                </div>
+              ))}
+            </div>
+          )}
+          
+          <div className="flex space-x-2 mb-4">
+            <button 
+              className="ios-button outline flex-1"
+              onClick={() => setSearchText('')}
+            >
+              Clear Text
+            </button>
+            <button 
+              className="ios-button outline flex-1"
+              onClick={clearList}
+            >
+              Clear List
+            </button>
+          </div>
+          
+          {selectedSpecies.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-lg font-medium mb-2">Selected Species</h3>
+              <div className="flex flex-wrap">
+                {selectedSpecies.map((species, index) => (
+                  <div 
+                    key={index} 
+                    className={`ios-chip ${species.isCommon ? 'primary' : 'danger'}`}
+                  >
+                    <span>{species.name}</span>
+                    <button 
+                      className="ml-2 text-xs"
+                      onClick={() => removeSpecies(index)}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          <button 
+            className="ios-button w-full mt-4"
+            onClick={onNext}
+            disabled={selectedSpecies.length === 0}
+            style={{ opacity: selectedSpecies.length === 0 ? 0.5 : 1 }}
+          >
+            Next: Enter Location
+          </button>
+        </div>
+      );
+    }
+
+    // Location Page Component
+    function LocationPage({ hotspots = [], selectedLocation, setSelectedLocation, onBack, onNext }) {
+      // Create a safe array reference that we can use throughout the component
+      const hotspotsArray = React.useMemo(() => {
+        return Array.isArray(hotspots) ? hotspots : [];
+      }, [hotspots]);
+      
+      const [searchText, setSearchText] = React.useState('');
+      const [searchResults, setSearchResults] = React.useState([]);
+      const [isLoadingLocation, setIsLoadingLocation] = React.useState(false);
+      const [locationError, setLocationError] = React.useState(null);
+
+      // Handle search input change
+      React.useEffect(() => {
+        if (!searchText || searchText.length < 2) {
+          setSearchResults([]);
+          return;
+        }
+
+        const lowerSearchText = searchText.toLowerCase();
+        
+        // Ensure hotspots is an array before filtering
+        const hotspotsArray = Array.isArray(hotspots) ? hotspots : [];
+        
+        const results = hotspotsArray
+          .filter(hotspot => hotspot.name.toLowerCase().includes(lowerSearchText))
+          .slice(0, 10); // Limit to 10 results
+
+        setSearchResults(results);
+      }, [searchText, hotspots]);
+
+      // Select a hotspot
+      const selectHotspot = (hotspot) => {
+        setSelectedLocation(hotspot);
+        setSearchText('');
+        setSearchResults([]);
+      };
+
+      // Handle manual location entry
+      const handleManualLocationChange = (value) => {
+        setSearchText(value);
+        setSelectedLocation({ name: value });
+      };
+
+      // Find hotspots near current location
+      const findNearbyHotspots = () => {
+        setIsLoadingLocation(true);
+        setLocationError(null);
+        
+        if (!navigator.geolocation) {
+          setLocationError("Geolocation is not supported by your browser");
+          setIsLoadingLocation(false);
+          return;
+        }
+        
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userLat = position.coords.latitude;
+            const userLon = position.coords.longitude;
+            
+            // Ensure hotspots is an array
+            const hotspotsArray = Array.isArray(hotspots) ? hotspots : [];
+            
+            if (hotspotsArray.length === 0) {
+              setLocationError("No hotspots data available");
+              setIsLoadingLocation(false);
+              return;
+            }
+            
+            // Calculate distance for each hotspot
+            const hotspotsWithDistance = hotspotsArray.map(hotspot => {
+              // Handle different property names (lat/lon vs latitude/longitude)
+              const hotspotLat = parseFloat(hotspot.latitude || hotspot.lat);
+              const hotspotLon = parseFloat(hotspot.longitude || hotspot.lon);
+              
+              const distance = calculateDistance(
+                userLat, userLon, 
+                hotspotLat, hotspotLon
+              );
+              return { 
+                ...hotspot, 
+                distance,
+                // Ensure consistent property names
+                latitude: hotspotLat,
+                longitude: hotspotLon
+              };
+            });
+            
+            // Sort by distance and take top 5
+            const closest = hotspotsWithDistance
+              .sort((a, b) => a.distance - b.distance)
+              .slice(0, 5);
+            
+            setSearchResults(closest);
+            setIsLoadingLocation(false);
+          },
+          (error) => {
+            setLocationError(`Error getting location: ${error.message}`);
+            setIsLoadingLocation(false);
+          }
+        );
+      };
+
+      // Calculate distance between two points
+      const calculateDistance = (lat1, lon1, lat2, lon2) => {
+        const R = 6371; // Radius of the earth in km
+        const dLat = deg2rad(lat2 - lat1);
+        const dLon = deg2rad(lon2 - lon1);
+        const a = 
+          Math.sin(dLat/2) * Math.sin(dLat/2) +
+          Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+          Math.sin(dLon/2) * Math.sin(dLon/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        const distance = R * c; // Distance in km
+        return distance;
+      };
+
+      const deg2rad = (deg) => {
+        return deg * (Math.PI/180);
+      };
+
+      // Clear selected location
+      const clearLocation = () => {
+        setSelectedLocation(null);
+        setSearchText('');
+      };
+
+      return (
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Step 2: Enter Location</h2>
+          
+          <div className="mb-4">
+            <input
+              type="text"
+              className="ios-input"
+              placeholder="Type location or hotspot name..."
+              value={searchText}
+              onChange={(e) => handleManualLocationChange(e.target.value)}
+            />
+          </div>
+          
+          {searchResults.length > 0 && (
+            <div className="ios-card mb-4">
+              {searchResults.map((result, index) => (
+                <div 
+                  key={index} 
+                  className="ios-list-item cursor-pointer hover:bg-gray-50"
+                  onClick={() => selectHotspot(result)}
+                >
+                  <div>{result.name}</div>
+                  {result.distance && (
+                    <div className="text-sm text-gray-500">
+                      {result.distance.toFixed(2)} km away
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+          
+          <button 
+            className="ios-button w-full mb-4"
+            onClick={findNearbyHotspots}
+            disabled={isLoadingLocation}
+          >
+            {isLoadingLocation ? (
+              <>
+                <span className="loading-spinner"></span>
+                Finding Nearby Hotspots...
+              </>
+            ) : (
+              "Find Hotspots Near Me"
+            )}
+          </button>
+          
+          {locationError && (
+            <div className="bg-red-100 text-red-700 p-3 rounded-lg mb-4">
+              {locationError}
+            </div>
+          )}
+          
+          {selectedLocation && (
+            <div className="ios-card p-4 mb-4">
+              <h3 className="text-lg font-medium mb-2">Selected Location</h3>
+              <p>{selectedLocation.name}</p>
+              {selectedLocation.latitude && selectedLocation.longitude && (
+                <p className="text-sm text-gray-500">
+                  Coordinates: {selectedLocation.latitude.toFixed(4)}, {selectedLocation.longitude.toFixed(4)}
+                </p>
+              )}
+              <button 
+                className="ios-button outline mt-2"
+                onClick={clearLocation}
+              >
+                Clear Location
+              </button>
+            </div>
+          )}
+          
+          <div className="flex space-x-2 mt-6">
+            <button 
+              className="ios-button outline flex-1"
+              onClick={onBack}
+            >
+              Back
+            </button>
+            <button 
+              className="ios-button flex-1"
+              onClick={onNext}
+              disabled={!selectedLocation}
+              style={{ opacity: !selectedLocation ? 0.5 : 1 }}
+            >
+              Next: Generate Alert
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // Alert Page Component
+    function AlertPage({ selectedSpecies, selectedLocation, onBack }) {
+      const [alertText, setAlertText] = React.useState('');
+      const [discordChannel, setDiscordChannel] = React.useState('#manhattan-chat');
+      const [copied, setCopied] = React.useState(false);
+
+      // Generate alert text
+      React.useEffect(() => {
+        if (selectedSpecies.length === 0 || !selectedLocation) {
+          setAlertText('');
+          return;
+        }
+        
+        // Compose alert text
+        let text = selectedSpecies.map(s => s.name).join(', ') + '\n';
+        text += 'at ' + selectedLocation.name;
+        
+        // Add map links if coordinates are available
+        if (selectedLocation.latitude && selectedLocation.longitude) {
+          text += '\n\n';
+          text += `[Google Pin](https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude})\n`;
+          text += `[Apple Pin](http://maps.apple.com/?ll=${selectedLocation.latitude},${selectedLocation.longitude}&q=Dropped%20Pin)`;
+        }
+        
+        setAlertText(text);
+        
+        // Determine discord channel
+        const hasRareSpecies = selectedSpecies.some(species => !species.isCommon);
+        setDiscordChannel(hasRareSpecies ? '#manhattan-rba' : '#manhattan-chat');
+        
+      }, [selectedSpecies, selectedLocation]);
+
+      // Copy alert text to clipboard
+      const copyToClipboard = () => {
+        navigator.clipboard.writeText(alertText);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      };
+
+      return (
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Step 3: Your Bird Alert</h2>
+          
+          <div className="ios-card mb-6">
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="text-lg font-medium">Alert Text</h3>
+            </div>
+            <div className="p-4">
+              <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded mb-4 text-sm">
+                {alertText}
+              </pre>
+              
+              <button 
+                className="ios-button w-full"
+                onClick={copyToClipboard}
+              >
+                {copied ? "Copied!" : "Copy Alert Text"}
+              </button>
+            </div>
+          </div>
+          
+          <div className="text-center mb-6">
+            <p className="mb-2">Post your alert in:</p>
+            <a
+              href={`https://discord.com/channels/${discordChannel}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 font-medium text-lg"
+            >
+              {discordChannel}
+            </a>
+            <p className="text-sm text-gray-500 mt-2">
+              {discordChannel === '#manhattan-rba' ? 
+                'Your alert contains rare species' : 
+                'Your alert contains only common species'}
+            </p>
+          </div>
+          
+          <button 
+            className="ios-button outline w-full"
+            onClick={onBack}
+          >
+            Back to Location
+          </button>
+        </div>
+      );
+    }
+
+    // Render the App
+    const root = ReactDOM.createRoot(document.getElementById('app'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

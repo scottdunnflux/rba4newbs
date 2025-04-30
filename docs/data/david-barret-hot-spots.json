@@ -1,0 +1,759 @@
+{
+    "hotspots": [
+        {
+            "name": "Great Lawn",
+            "lat": "40.7812807",
+            "lon": "-73.966645"
+        },
+        {
+            "name": "Turtle Pond",
+            "lat": "40.7793472",
+            "lon": "-73.9676749"
+        },
+        {
+            "name": "The Dock at Turtle Pond",
+            "lat": "40.7799301",
+            "lon": "-73.9681792"
+        },
+        {
+            "name": "Turtle Pond Island",
+            "lat": "40.7798001",
+            "lon": "-73.9685601"
+        },
+        {
+            "name": "Pinetum",
+            "lat": "40.7833929",
+            "lon": "-73.9667255"
+        },
+        {
+            "name": "Polish Statue",
+            "lat": "40.7790141",
+            "lon": "-73.9668301"
+        },
+        {
+            "name": "South Gate House",
+            "lat": "40.7822718",
+            "lon": "-73.9625144"
+        },
+        {
+            "name": "North Pump House",
+            "lat": "40.788863",
+            "lon": "-73.9607696"
+        },
+        {
+            "name": "Evodia (Bird Feeders)",
+            "lat": "40.7769261",
+            "lon": "-73.9688981"
+        },
+        {
+            "name": "Captain's Bench",
+            "lat": "40.7760425",
+            "lon": "-73.9690027"
+        },
+        {
+            "name": "The Cut at the Point",
+            "lat": "40.7754556",
+            "lon": "-73.9701587"
+        },
+        {
+            "name": "The Oven",
+            "lat": "40.776004",
+            "lon": "-73.9698905"
+        },
+        {
+            "name": "The Point",
+            "lat": "40.7751225",
+            "lon": "-73.9702767"
+        },
+        {
+            "name": "The Boathouse",
+            "lat": "40.774899",
+            "lon": "-73.968941"
+        },
+        {
+            "name": "Pilgrim Statue",
+            "lat": "40.7730506",
+            "lon": "-73.9680934"
+        },
+        {
+            "name": "Conservatory Water",
+            "lat": "40.7741922",
+            "lon": "-73.9672351"
+        },
+        {
+            "name": "Model Boat Pond",
+            "lat": "40.7743384",
+            "lon": "-73.9671868"
+        },
+        {
+            "name": "Bow Bridge",
+            "lat": "40.7756892",
+            "lon": "-73.9717358"
+        },
+        {
+            "name": "The Riviera",
+            "lat": "40.7758354",
+            "lon": "-73.9709178"
+        },
+        {
+            "name": "Willow Rock",
+            "lat": "40.7761675",
+            "lon": "-73.9699978"
+        },
+        {
+            "name": "Azalea Pond",
+            "lat": "40.7770582",
+            "lon": "-73.9695981"
+        },
+        {
+            "name": "Source of the Gill",
+            "lat": "40.7773669",
+            "lon": "-73.9690456"
+        },
+        {
+            "name": "The Gill",
+            "lat": "40.7773669",
+            "lon": "-73.9690463"
+        },
+        {
+            "name": "Azalea Pond",
+            "lat": "40.7770216",
+            "lon": "-73.9693379"
+        },
+        {
+            "name": "Gill",
+            "lat": "40.7770378",
+            "lon": "-73.9699844"
+        },
+        {
+            "name": "Gill",
+            "lat": "40.7774867",
+            "lon": "-73.9708775"
+        },
+        {
+            "name": "Gill Outlet (or Mouth)",
+            "lat": "40.7774095",
+            "lon": "-73.9713979"
+        },
+        {
+            "name": "Maintenance Meadow",
+            "lat": "40.777767",
+            "lon": "-73.9681846"
+        },
+        {
+            "name": "Maintenance Restrooms",
+            "lat": "40.7783885",
+            "lon": "-73.9677018"
+        },
+        {
+            "name": "Maintenance Shed",
+            "lat": "40.7778909",
+            "lon": "-73.9673343"
+        },
+        {
+            "name": "Iphigene's Walk",
+            "lat": "40.7783723",
+            "lon": "-73.9679593"
+        },
+        {
+            "name": "Weather Station",
+            "lat": "40.7789897",
+            "lon": "-73.9692387"
+        },
+        {
+            "name": "Humming Tombstone",
+            "lat": "40.7786465",
+            "lon": "-73.9701452"
+        },
+        {
+            "name": "Tupelo Meadow",
+            "lat": "40.7776898",
+            "lon": "-73.9693058"
+        },
+        {
+            "name": "Tupelo Tree",
+            "lat": "40.7778523",
+            "lon": "-73.9697027"
+        },
+        {
+            "name": "Muggers Woods",
+            "lat": "40.7780107",
+            "lon": "-73.9704215"
+        },
+        {
+            "name": "Ramble Caves",
+            "lat": "40.7779945",
+            "lon": "-73.9715051"
+        },
+        {
+            "name": "Upper Lobe",
+            "lat": "40.7791197",
+            "lon": "-73.9713389"
+        },
+        {
+            "name": "Bunting Meadow",
+            "lat": "40.7793979",
+            "lon": "-73.9707165"
+        },
+        {
+            "name": "Oak Bridge",
+            "lat": "40.7786719",
+            "lon": "-73.9716473"
+        },
+        {
+            "name": "Bank Rock Bridge",
+            "lat": "40.7787419",
+            "lon": "-73.9717036"
+        },
+        {
+            "name": "Balcony Bridge",
+            "lat": "40.7785754",
+            "lon": "-73.972401"
+        },
+        {
+            "name": "Triplets Bridge",
+            "lat": "40.7792294",
+            "lon": "-73.9726558"
+        },
+        {
+            "name": "Triplets Bridge Ravine",
+            "lat": "40.7792294",
+            "lon": "-73.9726558"
+        },
+        {
+            "name": "Locust Grove",
+            "lat": "40.7814026",
+            "lon": "-73.9683831"
+        },
+        {
+            "name": "Sparrow Rock",
+            "lat": "40.7822637",
+            "lon": "-73.9689624"
+        },
+        {
+            "name": "Summit Rock",
+            "lat": "40.7830944",
+            "lon": "-73.9702633"
+        },
+        {
+            "name": "Tanner's Spring",
+            "lat": "40.7823398",
+            "lon": "-73.9697269"
+        },
+        {
+            "name": "Shakespeare Garden",
+            "lat": "40.7797615",
+            "lon": "-73.9701238"
+        },
+        {
+            "name": "Belvedere Castle",
+            "lat": "40.779534",
+            "lon": "-73.9691985"
+        },
+        {
+            "name": "Hernshead",
+            "lat": "40.777505",
+            "lon": "-73.9728168"
+        },
+        {
+            "name": "Lower Lobe",
+            "lat": "40.7744725",
+            "lon": "-73.9734551"
+        },
+        {
+            "name": "Winterdale Arch",
+            "lat": "40.7818616",
+            "lon": "-73.9693862"
+        },
+        {
+            "name": "Strawberry Fields",
+            "lat": "40.7760852",
+            "lon": "-73.9747077"
+        },
+        {
+            "name": "Falconer's Hill",
+            "lat": "40.773983",
+            "lon": "-73.9740479"
+        },
+        {
+            "name": "Lawn Bowling Court",
+            "lat": "40.7736113",
+            "lon": "-73.9751342"
+        },
+        {
+            "name": "Croquet Court",
+            "lat": "40.7735463",
+            "lon": "-73.975035"
+        },
+        {
+            "name": "Warbler Rock",
+            "lat": "40.7761807",
+            "lon": "-73.971426"
+        },
+        {
+            "name": "Island on the Lake",
+            "lat": "40.7759979",
+            "lon": "-73.9723715"
+        },
+        {
+            "name": "Lower Lobe",
+            "lat": "40.7744705",
+            "lon": "-73.9734618"
+        },
+        {
+            "name": "Wagner Cove",
+            "lat": "40.7748158",
+            "lon": "-73.9733962"
+        },
+        {
+            "name": "Cherry Hill",
+            "lat": "40.7744562",
+            "lon": "-73.9718217"
+        },
+        {
+            "name": "Sheep Meadow",
+            "lat": "40.7719619",
+            "lon": "-73.9751959"
+        },
+        {
+            "name": "Gapstow Bridge",
+            "lat": "40.7668591",
+            "lon": "-73.9738011"
+        },
+        {
+            "name": "The Pond",
+            "lat": "40.7656524",
+            "lon": "-73.9744502"
+        },
+        {
+            "name": "Hallett Sanctuary",
+            "lat": "40.7663716",
+            "lon": "-73.9749438"
+        },
+        {
+            "name": "The Mall",
+            "lat": "40.7713688",
+            "lon": "-73.972224"
+        },
+        {
+            "name": "Rustic Shelter",
+            "lat": "40.7769139",
+            "lon": "-73.9710706"
+        },
+        {
+            "name": "Summer House",
+            "lat": "40.7769951",
+            "lon": "-73.971194"
+        },
+        {
+            "name": "Swampy Pin Oak",
+            "lat": "40.7765849",
+            "lon": "-73.9706871"
+        },
+        {
+            "name": "Gill Overlook",
+            "lat": "40.7777325",
+            "lon": "-73.9705878"
+        },
+        {
+            "name": "Greywacke Arch",
+            "lat": "40.7791065",
+            "lon": "-73.9655627"
+        },
+        {
+            "name": "Laupot Bridge",
+            "lat": "40.7774603",
+            "lon": "-73.9708252"
+        },
+        {
+            "name": "North Meadow Ballfields",
+            "lat": "40.7922959",
+            "lon": "-73.9585876"
+        },
+        {
+            "name": "Grassy Knoll (Knoll)",
+            "lat": "40.7942016",
+            "lon": "-73.9556801"
+        },
+        {
+            "name": "Wildflower Meadow",
+            "lat": "40.7947529",
+            "lon": "-73.9559859"
+        },
+        {
+            "name": "The Mount",
+            "lat": "40.7943671",
+            "lon": "-73.9538938"
+        },
+        {
+            "name": "Conservatory Garden",
+            "lat": "40.7938757",
+            "lon": "-73.9524937"
+        },
+        {
+            "name": "Fort Clinton",
+            "lat": "40.7952017",
+            "lon": "-73.9521396"
+        },
+        {
+            "name": "Green Bench",
+            "lat": "40.7948667",
+            "lon": "-73.9545402"
+        },
+        {
+            "name": "Duck Island",
+            "lat": "40.7969825",
+            "lon": "-73.9535129"
+        },
+        {
+            "name": "Nutter's Battery",
+            "lat": "40.7967713",
+            "lon": "-73.9526439"
+        },
+        {
+            "name": "McGowan's Pass",
+            "lat": "40.7960972",
+            "lon": "-73.9524615"
+        },
+        {
+            "name": "Dana Discovery Center",
+            "lat": "40.7970069",
+            "lon": "-73.9514852"
+        },
+        {
+            "name": "Meer Refreshment Stand",
+            "lat": "40.7950169",
+            "lon": "-73.9512813"
+        },
+        {
+            "name": "Lasker Rink",
+            "lat": "40.7964586",
+            "lon": "-73.9545858"
+        },
+        {
+            "name": "Huddlestone Arch",
+            "lat": "40.7958109",
+            "lon": "-73.9557163"
+        },
+        {
+            "name": "Lily Ponds",
+            "lat": "40.7981155",
+            "lon": "-73.9551061"
+        },
+        {
+            "name": "The Blockhouse",
+            "lat": "40.7987327",
+            "lon": "-73.9564955"
+        },
+        {
+            "name": "High Meadow",
+            "lat": "40.7971693",
+            "lon": "-73.9569247"
+        },
+        {
+            "name": "Great Hill Restrooms",
+            "lat": "40.7973926",
+            "lon": "-73.9591563"
+        },
+        {
+            "name": "Children's Glade",
+            "lat": "40.7969946",
+            "lon": "-73.959977"
+        },
+        {
+            "name": "East Blowdown Meadow",
+            "lat": "40.7959226",
+            "lon": "-73.9580995"
+        },
+        {
+            "name": "Sparrow Slope",
+            "lat": "40.795419",
+            "lon": "-73.9597141"
+        },
+        {
+            "name": "Great Hill Balancing Rock",
+            "lat": "40.7952525",
+            "lon": "-73.9605456"
+        },
+        {
+            "name": "The Pool",
+            "lat": "40.7947733",
+            "lon": "-73.9607227"
+        },
+        {
+            "name": "Glen Span Arch",
+            "lat": "40.794691",
+            "lon": "-73.9591468"
+        },
+        {
+            "name": "The Loch",
+            "lat": "40.794688",
+            "lon": "-73.9579788"
+        },
+        {
+            "name": "The Ravine",
+            "lat": "40.7948686",
+            "lon": "-73.9575442"
+        },
+        {
+            "name": "Loch's West Wooden Bridge",
+            "lat": "40.7946595",
+            "lon": "-73.9582604"
+        },
+        {
+            "name": "Loch's East Waterfall",
+            "lat": "40.7955002",
+            "lon": "-73.9560798"
+        },
+        {
+            "name": "Wildflower Meadow Path to Loch",
+            "lat": "40.7947895",
+            "lon": "-73.9566672"
+        },
+        {
+            "name": "Ridge Trail (North Woods)",
+            "lat": "40.7971612",
+            "lon": "-73.9562005"
+        },
+        {
+            "name": "Tennis Courts",
+            "lat": "40.7898997",
+            "lon": "-73.9621067"
+        },
+        {
+            "name": "Cedar Hill",
+            "lat": "40.7772389",
+            "lon": "-73.9665645"
+        },
+        {
+            "name": "The Lake",
+            "lat": "40.7768083",
+            "lon": "-73.9729589"
+        },
+        {
+            "name": "Wollman Rink",
+            "lat": "40.7676067",
+            "lon": "-73.9743805"
+        },
+        {
+            "name": "Great Hill",
+            "lat": "40.7969378",
+            "lon": "-73.9589471"
+        },
+        {
+            "name": "South Blowdown Meadow",
+            "lat": "40.7952733",
+            "lon": "-73.9598731"
+        },
+        {
+            "name": "Wood Chip Pile",
+            "lat": "40.7938554",
+            "lon": "-73.9537919"
+        },
+        {
+            "name": "Reservoir Fountain",
+            "lat": "40.7847008",
+            "lon": "-73.96451"
+        },
+        {
+            "name": "The Dairy",
+            "lat": "40.7692115",
+            "lon": "-73.9738387"
+        },
+        {
+            "name": "Heckscher Ballfields",
+            "lat": "40.7701743",
+            "lon": "-73.9771485"
+        },
+        {
+            "name": "Dene Rustic Shelter",
+            "lat": "40.7697985",
+            "lon": "-73.9694184"
+        },
+        {
+            "name": "Imagine Mosaic",
+            "lat": "40.7757867",
+            "lon": "-73.9752173"
+        },
+        {
+            "name": "Alexander Hamilton Statue",
+            "lat": "40.7808501",
+            "lon": "-73.9646173"
+        },
+        {
+            "name": "Oak East of Belvedere",
+            "lat": "40.7793208",
+            "lon": "-73.9685547"
+        },
+        {
+            "name": "Swedish Cottage",
+            "lat": "40.7799484",
+            "lon": "-73.9703143"
+        },
+        {
+            "name": "Stover Bench",
+            "lat": "40.7798125",
+            "lon": "-73.9695438"
+        },
+        {
+            "name": "Delacorte Theater",
+            "lat": "40.7801809",
+            "lon": "-73.9689718"
+        },
+        {
+            "name": "The Obelisk",
+            "lat": "40.7796356",
+            "lon": "-73.9654058"
+        },
+        {
+            "name": "Loch's Second Wooden Bridge",
+            "lat": "40.7942828",
+            "lon": "-73.9579245"
+        },
+        {
+            "name": "Pool's Wooden Bridge",
+            "lat": "40.7946524",
+            "lon": "-73.9596431"
+        },
+        {
+            "name": "Great Hill Lone Pine",
+            "lat": "40.7975916",
+            "lon": "-73.9576328"
+        },
+        {
+            "name": "Balancing Rock",
+            "lat": "40.7762457",
+            "lon": "-73.9687962"
+        },
+        {
+            "name": "Ramble Stone Arch",
+            "lat": "40.7783358",
+            "lon": "-73.971355"
+        },
+        {
+            "name": "Great Hill 107th Street Exit",
+            "lat": "40.7981358",
+            "lon": "-73.9574718"
+        },
+        {
+            "name": "Children's Glade (South End)",
+            "lat": "40.7962353",
+            "lon": "-73.9607656"
+        },
+        {
+            "name": "Chess & Checkers House",
+            "lat": "40.7691445",
+            "lon": "-73.9745549"
+        },
+        {
+            "name": "Umpire Rock",
+            "lat": "40.7692968",
+            "lon": "-73.9777601"
+        },
+        {
+            "name": "Pine Hill",
+            "lat": "40.7743262",
+            "lon": "-73.9699924"
+        },
+        {
+            "name": "Shakespeare Garden Overlook",
+            "lat": "40.7798509",
+            "lon": "-73.9695814"
+        },
+        {
+            "name": "Iron Bridge",
+            "lat": "40.7844622",
+            "lon": "-73.9662232"
+        },
+        {
+            "name": "Spector Playground",
+            "lat": "40.7846521",
+            "lon": "-73.969059"
+        },
+        {
+            "name": "Dene Native Meadow",
+            "lat": "40.7692626",
+            "lon": "-73.9720459"
+        },
+        {
+            "name": "Dene Summerhouse",
+            "lat": "40.7697744",
+            "lon": "-73.9694193"
+        },
+        {
+            "name": "Kerbs Model Boathouse",
+            "lat": "40.7739575",
+            "lon": "-73.9665684"
+        },
+        {
+            "name": "Nursery",
+            "lat": "40.7935436",
+            "lon": "-73.9535284"
+        },
+        {
+            "name": "Crouching Panther",
+            "lat": "40.7756903",
+            "lon": "-73.9672726"
+        },
+        {
+            "name": "Magic Bush (Cottoneaster)",
+            "lat": "40.7839364",
+            "lon": "-73.9687476"
+        },
+        {
+            "name": "Loch's First Cutout",
+            "lat": "40.7944302",
+            "lon": "-73.9576387"
+        },
+        {
+            "name": "Loch Overlook",
+            "lat": "40.7945319",
+            "lon": "-73.9581466"
+        },
+        {
+            "name": "Loch's Second Cutout",
+            "lat": "40.7948606",
+            "lon": "-73.9569981"
+        },
+        {
+            "name": "Loch's Boardwalk",
+            "lat": "40.7951936",
+            "lon": "-73.9563167"
+        },
+        {
+            "name": "Bathing Rock",
+            "lat": "40.79435",
+            "lon": "-73.9611551"
+        },
+        {
+            "name": "Persimmon Meadow",
+            "lat": "40.7768419",
+            "lon": "-73.968031"
+        },
+        {
+            "name": "North Gatehouse",
+            "lat": "40.7888542",
+            "lon": "-73.9614067"
+        },
+        {
+            "name": "Great Hill Tulip Tree",
+            "lat": "40.7961379",
+            "lon": "-73.9596879"
+        },
+        {
+            "name": "North Meadow Butterfly Gardens",
+            "lat": "40.7939256",
+            "lon": "-73.9557245"
+        },
+        {
+            "name": "Compost Heap",
+            "lat": "40.7943204",
+            "lon": "-73.9538954"
+        },
+        {
+            "name": "Seep",
+            "lat": "40.7948127",
+            "lon": "-73.9582795"
+        }
+    ]
+}
