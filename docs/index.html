@@ -607,7 +607,8 @@
     // Alert Page Component
     function AlertPage({ selectedSpecies, selectedLocation, onBack }) {
       const [alertText, setAlertText] = React.useState('');
-      const [discordChannel, setDiscordChannel] = React.useState('#manhattan-chat');
+      //setting channel to #manhattan-chat
+      const [discordChannel, setDiscordChannel] = React.useState('985141457067311204/1081022499778728019');
       const [copied, setCopied] = React.useState(false);
 
       // Generate alert text
@@ -676,7 +677,8 @@
               {discordChannel}
             </a>
             <p className="text-sm text-gray-500 mt-2">
-              {discordChannel === '#manhattan-rba' ? 
+              <!-- setting channel to #manhattan-rba-->
+              {discordChannel === '985141457067311204/1062895152257048667' ? 
                 'Your alert contains rare species' : 
                 'Your alert contains only common species'}
             </p>
