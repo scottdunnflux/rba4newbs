@@ -504,24 +504,12 @@
             const userLat = position.coords.latitude;
             const userLon = position.coords.longitude;
             
-            // If we already have a selected location with coordinates, use those
-            if (selectedLocation && selectedLocation.latitude && selectedLocation.longitude) {
-              setMapInitialCoords({
-                lat: selectedLocation.latitude,
-                lng: selectedLocation.longitude
-              });
-            } else {
-              // Otherwise use current position
-              setMapInitialCoords({
-                lat: userLat,
-                lng: userLon
-              });
-            }
-            
-            // Pass the current search text to the map component
+            // Pass the current location name to the map component
+            const locationNameToPass = selectedLocation ? selectedLocation.name : (searchText || "BLANK");
             setMapInitialCoords({
-              ...mapInitialCoords,
-              locationName: searchText || "BLANK" // Use "BLANK" if searchText is empty
+              lat: userLat,
+              lng: userLon,
+              locationName: locationNameToPass
             });
             
             setShowMap(true);
@@ -538,8 +526,9 @@
       const handleAcceptMapLocation = (location) => {
         setSelectedLocation(location);
         setShowMap(false);
-        // Preserve the search text if it exists
-        if (location.name !== "BLANK" && location.name !== "Custom Pin Location") {
+        
+        // Preserve the location name in the search text
+        if (location.name !== "Custom Pin Location") {
           setSearchText(location.name);
         }
       };
@@ -696,7 +685,7 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
     lat: initialLat || 40.7829, // Default to Central Park if no initial position
     lng: initialLng || -73.9654
   });
-  const [locationName, setLocationName] = React.useState(initialLocationName || "BLANK");
+  const [locationName, setLocationName] = React.useState(initialLocationName || "Custom Pin Location");
   const [isLoading, setIsLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
 
@@ -785,14 +774,6 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
       const newPos = newMarker.getPosition();
       if (newPos) {
         setCurrentPosition({ lat: newPos.lat(), lng: newPos.lng() });
-        
-        // Try to get address for the new position
-        const geocoder = new window.google.maps.Geocoder();
-        geocoder.geocode({ location: newPos }, (results, status) => {
-          if (status === "OK" && results && results[0]) {
-            setLocationName(results[0].formatted_address);
-          }
-        });
       }
     });
 
@@ -801,22 +782,6 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
       if (e.latLng && newMarker) {
         newMarker.setPosition(e.latLng);
         setCurrentPosition({ lat: e.latLng.lat(), lng: e.latLng.lng() });
-        
-        // Try to get address for the new position
-        const geocoder = new window.google.maps.Geocoder();
-        geocoder.geocode({ location: e.latLng }, (results, status) => {
-          if (status === "OK" && results && results[0]) {
-            setLocationName(results[0].formatted_address);
-          }
-        });
-      }
-    });
-
-    // Try to get address for initial position
-    const geocoder = new window.google.maps.Geocoder();
-    geocoder.geocode({ location: position }, (results, status) => {
-      if (status === "OK" && results && results[0]) {
-        setLocationName(results[0].formatted_address);
       }
     });
 
@@ -838,14 +803,6 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
           if (map && marker) {
             map.setCenter(pos);
             marker.setPosition(pos);
-            
-            // Try to get address for the new position
-            const geocoder = new window.google.maps.Geocoder();
-            geocoder.geocode({ location: pos }, (results, status) => {
-              if (status === "OK" && results && results[0]) {
-                setLocationName(results[0].formatted_address);
-              }
-            });
           }
           
           setIsLoading(false);
@@ -863,7 +820,7 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
   // Handle accepting the location
   const handleAcceptLocation = () => {
     onAcceptLocation({
-      name: locationName,
+      name: locationName === "BLANK" ? "Custom Pin Location" : locationName,
       latitude: currentPosition.lat,
       longitude: currentPosition.lng
     });
@@ -887,7 +844,7 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
         <div className="flex justify-between items-center">
           <div>
             <p className="text-sm font-medium">Current Pin Location:</p>
-            <p className="text-sm text-gray-600">{locationName}</p>
+            <p className="text-sm text-gray-600">{locationName === "BLANK" ? "Custom Pin Location" : locationName}</p>
             <p className="text-xs text-gray-500">
               Lat: {currentPosition.lat.toFixed(6)}, Lng: {currentPosition.lng.toFixed(6)}
             </p>
