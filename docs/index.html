@@ -579,7 +579,7 @@
           <LocationMap 
             initialLat={mapInitialCoords?.lat}
             initialLng={mapInitialCoords?.lng}
-            locationName={mapInitialCoords?.locationName}
+            initialLocationName={mapInitialCoords?.locationName}
             onAcceptLocation={handleAcceptMapLocation}
             onCancel={handleCancelMap}
           />
@@ -688,7 +688,7 @@
     }
 
     // LocationMap Component
-function LocationMap({ initialLat, initialLng, locationName, onAcceptLocation, onCancel }) {
+function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLocation, onCancel }) {
   const mapRef = React.useRef(null);
   const [map, setMap] = React.useState(null);
   const [marker, setMarker] = React.useState(null);
@@ -696,7 +696,7 @@ function LocationMap({ initialLat, initialLng, locationName, onAcceptLocation, o
     lat: initialLat || 40.7829, // Default to Central Park if no initial position
     lng: initialLng || -73.9654
   });
-  const [locationName, setLocationName] = React.useState(locationName || "BLANK");
+  const [locationName, setLocationName] = React.useState(initialLocationName || "BLANK");
   const [isLoading, setIsLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
 
