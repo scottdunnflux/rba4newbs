@@ -518,6 +518,12 @@
               });
             }
             
+            // Pass the current search text to the map component
+            setMapInitialCoords({
+              ...mapInitialCoords,
+              locationName: searchText || "BLANK" // Use "BLANK" if searchText is empty
+            });
+            
             setShowMap(true);
           },
           (error) => {
@@ -532,6 +538,10 @@
       const handleAcceptMapLocation = (location) => {
         setSelectedLocation(location);
         setShowMap(false);
+        // Preserve the search text if it exists
+        if (location.name !== "BLANK" && location.name !== "Custom Pin Location") {
+          setSearchText(location.name);
+        }
       };
 
       // Handle canceling map selection
@@ -569,6 +579,7 @@
           <LocationMap 
             initialLat={mapInitialCoords?.lat}
             initialLng={mapInitialCoords?.lng}
+            locationName={mapInitialCoords?.locationName}
             onAcceptLocation={handleAcceptMapLocation}
             onCancel={handleCancelMap}
           />
@@ -677,7 +688,7 @@
     }
 
     // LocationMap Component
-function LocationMap({ initialLat, initialLng, onAcceptLocation, onCancel }) {
+function LocationMap({ initialLat, initialLng, locationName, onAcceptLocation, onCancel }) {
   const mapRef = React.useRef(null);
   const [map, setMap] = React.useState(null);
   const [marker, setMarker] = React.useState(null);
@@ -685,7 +696,7 @@ function LocationMap({ initialLat, initialLng, onAcceptLocation, onCancel }) {
     lat: initialLat || 40.7829, // Default to Central Park if no initial position
     lng: initialLng || -73.9654
   });
-  const [locationName, setLocationName] = React.useState("Custom Pin Location");
+  const [locationName, setLocationName] = React.useState(locationName || "BLANK");
   const [isLoading, setIsLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
 
@@ -918,6 +929,7 @@ function LocationMap({ initialLat, initialLng, onAcceptLocation, onCancel }) {
       const [alertText, setAlertText] = React.useState('');
       const [discordChannel, setDiscordChannel] = React.useState('#manhattan-chat');
       const [copied, setCopied] = React.useState(false);
+      const [twitterAlertText, setTwitterAlertText] = React.useState('');
 
       // Generate alert text
       React.useEffect(() => {
@@ -933,8 +945,8 @@ function LocationMap({ initialLat, initialLng, onAcceptLocation, onCancel }) {
         // Add map links if coordinates are available
         if (selectedLocation.latitude && selectedLocation.longitude) {
           text += '\n\n';
-          text += `[Google Pin](https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude})\n`;
-          text += `[Apple Pin](http://maps.apple.com/?ll=${selectedLocation.latitude},${selectedLocation.longitude}&q=Dropped%20Pin)`;
+          text += `📍 [Google](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>) • `;
+          text += `📍 [Apple](http://maps.apple.com/?ll=${selectedLocation.latitude},${selectedLocation.longitude}&q=Dropped%20Pin)`;
         }
         
         setAlertText(text);
@@ -942,6 +954,13 @@ function LocationMap({ initialLat, initialLng, onAcceptLocation, onCancel }) {
         // Determine discord channel
         const hasRareSpecies = selectedSpecies.some(species => !species.isCommon);
         setDiscordChannel(hasRareSpecies ? '#manhattan-rba' : '#manhattan-chat');
+        
+        // Generate Twitter alert text (just the species, location, and Google Maps URL)
+        let twitterText = selectedSpecies.map(s => s.name).join(', ') + ' at ' + selectedLocation.name;
+        if (selectedLocation.latitude && selectedLocation.longitude) {
+          twitterText += '\n\nhttps://maps.google.com/?q=' + selectedLocation.latitude + ',' + selectedLocation.longitude;
+        }
+        setTwitterAlertText(twitterText);
         
       }, [selectedSpecies, selectedLocation]);
 
@@ -991,6 +1010,39 @@ function LocationMap({ initialLat, initialLng, onAcceptLocation, onCancel }) {
                 'Your alert contains rare species' : 
                 'Your alert contains only common species'}
             </p>
+          </div>
+          
+          <div className="ios-card mb-6 mt-6">
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="text-lg font-medium">Twitter/X Alert</h3>
+            </div>
+            <div className="p-4">
+              <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded mb-4 text-sm">
+                {twitterAlertText}
+              </pre>
+              
+              <button 
+                className="ios-button w-full"
+                onClick={() => {
+                  navigator.clipboard.writeText(twitterAlertText);
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+              >
+                {copied ? "Copied!" : "Copy Twitter/X Alert"}
+              </button>
+              
+              <div className="text-center mt-4">
+                <a
+                  href="https://twitter.com/compose/tweet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 font-medium"
+                >
+                  Open Twitter/X
+                </a>
+              </div>
+            </div>
           </div>
           
           <button 
