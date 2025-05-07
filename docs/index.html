@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manhattan Rare Bird Alert Assistant</title>
+  <title>Manhattan Bird Alerts for Newbs</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -96,6 +96,13 @@
       React.useEffect(() => {
         async function loadData() {
           try {
+            // Add this right after the try block starts in the loadData function
+            console.log('Attempting to load data from:', 
+              './data/nyc-species2.json',
+              './data/common-birds.txt',
+              './data/david-barret-hot-spots.json'
+            );
+
             // Load hotspots from david-barret-hot-spots.json
             let hotspots = [];
             try {
@@ -123,17 +130,27 @@
               hotspots = [];
             }
             
+            // Fix the data loading function to properly fetch and use the species data
             // Load bird species from nyc-species2.json
-            const speciesResponse = await fetch('./data/nyc-species2.json');
-            if (!speciesResponse.ok) throw new Error('Failed to load bird species data');
-
-            // Extract species data with all searchable fields
-            const birdSpecies = speciesData.map(bird => ({
-              common_name: bird.common_name,
-              code4: bird.code4 || "",
-              code: bird.code || "",
-              scientific_name: bird.scientific_name || ""
-            }));
+            let birdSpecies = [];
+            try {
+              const speciesResponse = await fetch('./data/nyc-species2.json');
+              if (!speciesResponse.ok) throw new Error('Failed to load bird species data');
+              const speciesData = await speciesResponse.json();
+              
+              // Extract species data with all searchable fields
+              birdSpecies = speciesData.map(bird => ({
+                common_name: bird.common_name,
+                code4: bird.code4 || "",
+                code: bird.code || "",
+                scientific_name: bird.scientific_name || ""
+              }));
+              
+              console.log('Loaded bird species:', birdSpecies.length);
+            } catch (speciesError) {
+              console.error('Error loading species data:', speciesError);
+              throw new Error('Failed to load bird species data: ' + speciesError.message);
+            }
             
             // Load common birds from common-birds.txt
             const commonBirdsResponse = await fetch('./data/common-birds.txt');
@@ -185,7 +202,7 @@
         return (
           <div className="max-w-md mx-auto bg-white min-h-screen">
             <header className="bg-blue-500 text-white p-4 text-center">
-              <h1 className="text-xl font-bold">Manhattan Rare Bird Alert Assistant</h1>
+              <h1 className="text-xl font-bold">Manhattan Bird Alerts for Newbs</h1>
             </header>
             <main className="p-4 flex flex-col items-center justify-center" style={{ minHeight: 'calc(100vh - 64px)' }}>
               <div className="loading-spinner" style={{ width: '40px', height: '40px', marginBottom: '16px' }}></div>
@@ -200,7 +217,7 @@
         return (
           <div className="max-w-md mx-auto bg-white min-h-screen">
             <header className="bg-blue-500 text-white p-4 text-center">
-              <h1 className="text-xl font-bold">Manhattan Rare Bird Alert Assistant</h1>
+              <h1 className="text-xl font-bold">Manhattan Bird Alerts for Newbs</h1>
             </header>
             <main className="p-4">
               <div className="bg-red-100 text-red-700 p-4 rounded-lg">
@@ -208,10 +225,18 @@
                 <p>{error}</p>
                 <p className="mt-2">Please check that all data files are in the correct location:</p>
                 <ul className="list-disc ml-5 mt-2">
-                  <li>data/nyc-species.json</li>
+                  <li>data/nyc-species2.json</li>
                   <li>data/common-birds.txt</li>
                   <li>data/david-barret-hot-spots.json</li>
                 </ul>
+                <p className="mt-2">You can also try loading directly from:</p>
+                <a 
+                  href="https://scottdunnflux.github.io/rba4newbs/data/nyc-species2.json" 
+                  target="_blank" 
+                  className="text-blue-600 underline"
+                >
+                  External JSON file
+                </a>
                 <button 
                   className="ios-button mt-4"
                   onClick={() => window.location.reload()}
@@ -263,7 +288,7 @@
       return (
         <div className="max-w-md mx-auto bg-white min-h-screen">
           <header className="bg-blue-500 text-white p-4 text-center">
-            <h1 className="text-xl font-bold">Manhattan Rare Bird Alert Assistant</h1>
+            <h1 className="text-xl font-bold">Manhattan Bird Alerts for Newbs</h1>
           </header>
           <main className="p-4">
             {renderPage()}
