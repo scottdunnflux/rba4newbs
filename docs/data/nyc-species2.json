@@ -1,0 +1,2393 @@
+[
+    {
+        "code4": "sngo",
+        "code": "snogoo",
+        "common_name": "Snow Goose",
+        "scientific_name": "Anser caerulescens"
+    },
+    {
+        "code4": "rogo",
+        "code": "rosgoo",
+        "common_name": "Ross's Goose",
+        "scientific_name": "Anser rossii"
+    },
+    {
+        "code4": "grgo",
+        "code": "gragoo",
+        "common_name": "Graylag Goose",
+        "scientific_name": "Anser anser"
+    },
+    {
+        "code4": "",
+        "code": "swagoo1",
+        "common_name": "Swan Goose",
+        "scientific_name": "Anser cygnoides"
+    },
+    {
+        "code4": "",
+        "code": "x00776",
+        "common_name": "Graylag x Swan Goose (hybrid)",
+        "scientific_name": "Anser anser x cygnoides"
+    },
+    {
+        "code4": "gwfg",
+        "code": "gwfgoo",
+        "common_name": "Greater White-fronted Goose",
+        "scientific_name": "Anser albifrons"
+    },
+    {
+        "code4": "bran",
+        "code": "brant",
+        "common_name": "Brant",
+        "scientific_name": "Branta bernicla"
+    },
+    {
+        "code4": "barg*",
+        "code": "bargoo",
+        "common_name": "Barnacle Goose",
+        "scientific_name": "Branta leucopsis"
+    },
+    {
+        "code4": "cacg*",
+        "code": "cacgoo1",
+        "common_name": "Cackling Goose",
+        "scientific_name": "Branta hutchinsii"
+    },
+    {
+        "code4": "",
+        "code": "x00722",
+        "common_name": "Brant x Cackling Goose (hybrid)",
+        "scientific_name": "Branta bernicla x hutchinsii"
+    },
+    {
+        "code4": "cang*",
+        "code": "cangoo",
+        "common_name": "Canada Goose",
+        "scientific_name": "Branta canadensis"
+    },
+    {
+        "code4": "",
+        "code": "x00758",
+        "common_name": "Graylag x Canada Goose (hybrid)",
+        "scientific_name": "Anser anser x Branta canadensis"
+    },
+    {
+        "code4": "musw",
+        "code": "mutswa",
+        "common_name": "Mute Swan",
+        "scientific_name": "Cygnus olor"
+    },
+    {
+        "code4": "tusw",
+        "code": "tunswa",
+        "common_name": "Tundra Swan",
+        "scientific_name": "Cygnus columbianus"
+    },
+    {
+        "code4": "mudu",
+        "code": "musduc",
+        "common_name": "Muscovy Duck",
+        "scientific_name": "Cairina moschata"
+    },
+    {
+        "code4": "wodu",
+        "code": "wooduc",
+        "common_name": "Wood Duck",
+        "scientific_name": "Aix sponsa"
+    },
+    {
+        "code4": "",
+        "code": "manduc",
+        "common_name": "Mandarin Duck",
+        "scientific_name": "Aix galericulata"
+    },
+    {
+        "code4": "bwte",
+        "code": "buwtea",
+        "common_name": "Blue-winged Teal",
+        "scientific_name": "Spatula discors"
+    },
+    {
+        "code4": "nsho*",
+        "code": "norsho",
+        "common_name": "Northern Shoveler",
+        "scientific_name": "Spatula clypeata"
+    },
+    {
+        "code4": "gadw",
+        "code": "gadwal",
+        "common_name": "Gadwall",
+        "scientific_name": "Mareca strepera"
+    },
+    {
+        "code4": "euwi",
+        "code": "eurwig",
+        "common_name": "Eurasian Wigeon",
+        "scientific_name": "Mareca penelope"
+    },
+    {
+        "code4": "amwi",
+        "code": "amewig",
+        "common_name": "American Wigeon",
+        "scientific_name": "Mareca americana"
+    },
+    {
+        "code4": "mall",
+        "code": "mallar3",
+        "common_name": "Mallard",
+        "scientific_name": "Anas platyrhynchos"
+    },
+    {
+        "code4": "",
+        "code": "mdxmal1",
+        "common_name": "Muscovy Duck x Mallard (hybrid)",
+        "scientific_name": "Cairina moschata x Anas platyrhynchos"
+    },
+    {
+        "code4": "abdu",
+        "code": "ambduc",
+        "common_name": "American Black Duck",
+        "scientific_name": "Anas rubripes"
+    },
+    {
+        "code4": "",
+        "code": "x00004",
+        "common_name": "Mallard x American Black Duck (hybrid)",
+        "scientific_name": "Anas platyrhynchos x rubripes"
+    },
+    {
+        "code4": "nopi",
+        "code": "norpin",
+        "common_name": "Northern Pintail",
+        "scientific_name": "Anas acuta"
+    },
+    {
+        "code4": "gwte",
+        "code": "gnwtea",
+        "common_name": "Green-winged Teal",
+        "scientific_name": "Anas crecca"
+    },
+    {
+        "code4": "canv",
+        "code": "canvas",
+        "common_name": "Canvasback",
+        "scientific_name": "Aythya valisineria"
+    },
+    {
+        "code4": "redh",
+        "code": "redhea",
+        "common_name": "Redhead",
+        "scientific_name": "Aythya americana"
+    },
+    {
+        "code4": "rndu",
+        "code": "rinduc",
+        "common_name": "Ring-necked Duck",
+        "scientific_name": "Aythya collaris"
+    },
+    {
+        "code4": "tudu",
+        "code": "tufduc",
+        "common_name": "Tufted Duck",
+        "scientific_name": "Aythya fuligula"
+    },
+    {
+        "code4": "grsc",
+        "code": "gresca",
+        "common_name": "Greater Scaup",
+        "scientific_name": "Aythya marila"
+    },
+    {
+        "code4": "lesc",
+        "code": "lessca",
+        "common_name": "Lesser Scaup",
+        "scientific_name": "Aythya affinis"
+    },
+    {
+        "code4": "kiei",
+        "code": "kineid",
+        "common_name": "King Eider",
+        "scientific_name": "Somateria spectabilis"
+    },
+    {
+        "code4": "coei",
+        "code": "comeid",
+        "common_name": "Common Eider",
+        "scientific_name": "Somateria mollissima"
+    },
+    {
+        "code4": "susc",
+        "code": "sursco",
+        "common_name": "Surf Scoter",
+        "scientific_name": "Melanitta perspicillata"
+    },
+    {
+        "code4": "wwsc",
+        "code": "whwsco2",
+        "common_name": "White-winged Scoter",
+        "scientific_name": "Melanitta deglandi"
+    },
+    {
+        "code4": "blsc",
+        "code": "blksco2",
+        "common_name": "Black Scoter",
+        "scientific_name": "Melanitta americana"
+    },
+    {
+        "code4": "ltdu",
+        "code": "lotduc",
+        "common_name": "Long-tailed Duck",
+        "scientific_name": "Clangula hyemalis"
+    },
+    {
+        "code4": "buff",
+        "code": "buffle",
+        "common_name": "Bufflehead",
+        "scientific_name": "Bucephala albeola"
+    },
+    {
+        "code4": "cogo",
+        "code": "comgol",
+        "common_name": "Common Goldeneye",
+        "scientific_name": "Bucephala clangula"
+    },
+    {
+        "code4": "",
+        "code": "cxbgol1",
+        "common_name": "Common x Barrow's Goldeneye (hybrid)",
+        "scientific_name": "Bucephala clangula x islandica"
+    },
+    {
+        "code4": "home",
+        "code": "hoomer",
+        "common_name": "Hooded Merganser",
+        "scientific_name": "Lophodytes cucullatus"
+    },
+    {
+        "code4": "come",
+        "code": "commer",
+        "common_name": "Common Merganser",
+        "scientific_name": "Mergus merganser"
+    },
+    {
+        "code4": "rbme",
+        "code": "rebmer",
+        "common_name": "Red-breasted Merganser",
+        "scientific_name": "Mergus serrator"
+    },
+    {
+        "code4": "rudu",
+        "code": "rudduc",
+        "common_name": "Ruddy Duck",
+        "scientific_name": "Oxyura jamaicensis"
+    },
+    {
+        "code4": "helg*",
+        "code": "helgui",
+        "common_name": "Helmeted Guineafowl",
+        "scientific_name": "Numida meleagris"
+    },
+    {
+        "code4": "nobo",
+        "code": "norbob",
+        "common_name": "Northern Bobwhite",
+        "scientific_name": "Colinus virginianus"
+    },
+    {
+        "code4": "witu",
+        "code": "wiltur",
+        "common_name": "Wild Turkey",
+        "scientific_name": "Meleagris gallopavo"
+    },
+    {
+        "code4": "rnep*",
+        "code": "rinphe1",
+        "common_name": "Ring-necked Pheasant",
+        "scientific_name": "Phasianus colchicus"
+    },
+    {
+        "code4": "inpe",
+        "code": "compea",
+        "common_name": "Indian Peafowl",
+        "scientific_name": "Pavo cristatus"
+    },
+    {
+        "code4": "reju",
+        "code": "redjun",
+        "common_name": "Red Junglefowl",
+        "scientific_name": "Gallus gallus"
+    },
+    {
+        "code4": "ropi",
+        "code": "rocpig",
+        "common_name": "Rock Pigeon",
+        "alternative_names": ["Herring Gull (feral)"],
+        "scientific_name": "Columba livia"
+    },
+    {
+        "code4": "eucd",
+        "code": "eucdov",
+        "common_name": "Eurasian Collared-Dove",
+        "scientific_name": "Streptopelia decaocto"
+    },
+    {
+        "code4": "afcd",
+        "code": "afcdov1",
+        "common_name": "African Collared-Dove",
+        "scientific_name": "Streptopelia roseogrisea"
+    },
+    {
+        "code4": "",
+        "code": "diadov1",
+        "common_name": "Diamond Dove",
+        "scientific_name": "Geopelia cuneata"
+    },
+    {
+        "code4": "wwdo",
+        "code": "whwdov",
+        "common_name": "White-winged Dove",
+        "scientific_name": "Zenaida asiatica"
+    },
+    {
+        "code4": "modo",
+        "code": "moudov",
+        "common_name": "Mourning Dove",
+        "scientific_name": "Zenaida macroura"
+    },
+    {
+        "code4": "ybcu",
+        "code": "yebcuc",
+        "common_name": "Yellow-billed Cuckoo",
+        "scientific_name": "Coccyzus americanus"
+    },
+    {
+        "code4": "bbcu",
+        "code": "bkbcuc",
+        "common_name": "Black-billed Cuckoo",
+        "scientific_name": "Coccyzus erythropthalmus"
+    },
+    {
+        "code4": "coni",
+        "code": "comnig",
+        "common_name": "Common Nighthawk",
+        "scientific_name": "Chordeiles minor"
+    },
+    {
+        "code4": "cwwi",
+        "code": "chwwid",
+        "common_name": "Chuck-will's-widow",
+        "scientific_name": "Antrostomus carolinensis"
+    },
+    {
+        "code4": "ewpw",
+        "code": "easwpw1",
+        "common_name": "Eastern Whip-poor-will",
+        "scientific_name": "Antrostomus vociferus"
+    },
+    {
+        "code4": "chsw",
+        "code": "chiswi",
+        "common_name": "Chimney Swift",
+        "scientific_name": "Chaetura pelagica"
+    },
+    {
+        "code4": "rthu",
+        "code": "rthhum",
+        "common_name": "Ruby-throated Hummingbird",
+        "scientific_name": "Archilochus colubris"
+    },
+    {
+        "code4": "bchu",
+        "code": "bkchum",
+        "common_name": "Black-chinned Hummingbird",
+        "scientific_name": "Archilochus alexandri"
+    },
+    {
+        "code4": "cahu",
+        "code": "calhum",
+        "common_name": "Calliope Hummingbird",
+        "scientific_name": "Selasphorus calliope"
+    },
+    {
+        "code4": "ruhu",
+        "code": "rufhum",
+        "common_name": "Rufous Hummingbird",
+        "scientific_name": "Selasphorus rufus"
+    },
+    {
+        "code4": "clra",
+        "code": "clarai11",
+        "common_name": "Clapper Rail",
+        "scientific_name": "Rallus crepitans"
+    },
+    {
+        "code4": "vira",
+        "code": "virrai",
+        "common_name": "Virginia Rail",
+        "scientific_name": "Rallus limicola"
+    },
+    {
+        "code4": "sora",
+        "code": "sora",
+        "common_name": "Sora",
+        "scientific_name": "Porzana carolina"
+    },
+    {
+        "code4": "coga",
+        "code": "comgal1",
+        "common_name": "Common Gallinule",
+        "scientific_name": "Gallinula galeata"
+    },
+    {
+        "code4": "amco",
+        "code": "y00475",
+        "common_name": "American Coot",
+        "scientific_name": "Fulica americana"
+    },
+    {
+        "code4": "puga",
+        "code": "purgal2",
+        "common_name": "Purple Gallinule",
+        "scientific_name": "Porphyrio martinica"
+    },
+    {
+        "code4": "sacr",
+        "code": "sancra",
+        "common_name": "Sandhill Crane",
+        "scientific_name": "Antigone canadensis"
+    },
+    {
+        "code4": "amav",
+        "code": "ameavo",
+        "common_name": "American Avocet",
+        "scientific_name": "Recurvirostra americana"
+    },
+    {
+        "code4": "amoy",
+        "code": "ameoys",
+        "common_name": "American Oystercatcher",
+        "scientific_name": "Haematopus palliatus"
+    },
+    {
+        "code4": "bbpl",
+        "code": "bkbplo",
+        "common_name": "Black-bellied Plover",
+        "scientific_name": "Pluvialis squatarola"
+    },
+    {
+        "code4": "amgp",
+        "code": "amgplo",
+        "common_name": "American Golden-Plover",
+        "scientific_name": "Pluvialis dominica"
+    },
+    {
+        "code4": "kill",
+        "code": "killde",
+        "common_name": "Killdeer",
+        "scientific_name": "Charadrius vociferus"
+    },
+    {
+        "code4": "sepl",
+        "code": "semplo",
+        "common_name": "Semipalmated Plover",
+        "scientific_name": "Charadrius semipalmatus"
+    },
+    {
+        "code4": "upsa",
+        "code": "uplsan",
+        "common_name": "Upland Sandpiper",
+        "scientific_name": "Bartramia longicauda"
+    },
+    {
+        "code4": "whim",
+        "code": "whimbr",
+        "common_name": "Whimbrel",
+        "scientific_name": "Numenius phaeopus"
+    },
+    {
+        "code4": "hugo",
+        "code": "hudgod",
+        "common_name": "Hudsonian Godwit",
+        "scientific_name": "Limosa haemastica"
+    },
+    {
+        "code4": "sbdo",
+        "code": "shbdow",
+        "common_name": "Short-billed Dowitcher",
+        "scientific_name": "Limnodromus griseus"
+    },
+    {
+        "code4": "lbdo",
+        "code": "lobdow",
+        "common_name": "Long-billed Dowitcher",
+        "scientific_name": "Limnodromus scolopaceus"
+    },
+    {
+        "code4": "amwo",
+        "code": "amewoo",
+        "common_name": "American Woodcock",
+        "scientific_name": "Scolopax minor"
+    },
+    {
+        "code4": "wisn",
+        "code": "wilsni1",
+        "common_name": "Wilson's Snipe",
+        "scientific_name": "Gallinago delicata"
+    },
+    {
+        "code4": "reph",
+        "code": "redpha1",
+        "common_name": "Red Phalarope",
+        "scientific_name": "Phalaropus fulicarius"
+    },
+    {
+        "code4": "rnph",
+        "code": "renpha",
+        "common_name": "Red-necked Phalarope",
+        "scientific_name": "Phalaropus lobatus"
+    },
+    {
+        "code4": "spsa",
+        "code": "sposan",
+        "common_name": "Spotted Sandpiper",
+        "scientific_name": "Actitis macularius"
+    },
+    {
+        "code4": "sosa",
+        "code": "solsan",
+        "common_name": "Solitary Sandpiper",
+        "scientific_name": "Tringa solitaria"
+    },
+    {
+        "code4": "leye",
+        "code": "lesyel",
+        "common_name": "Lesser Yellowlegs",
+        "scientific_name": "Tringa flavipes"
+    },
+    {
+        "code4": "will",
+        "code": "willet1",
+        "common_name": "Willet",
+        "scientific_name": "Tringa semipalmata"
+    },
+    {
+        "code4": "grye",
+        "code": "greyel",
+        "common_name": "Greater Yellowlegs",
+        "scientific_name": "Tringa melanoleuca"
+    },
+    {
+        "code4": "rutu",
+        "code": "rudtur",
+        "common_name": "Ruddy Turnstone",
+        "scientific_name": "Arenaria interpres"
+    },
+    {
+        "code4": "rekn",
+        "code": "redkno",
+        "common_name": "Red Knot",
+        "scientific_name": "Calidris canutus"
+    },
+    {
+        "code4": "stsa",
+        "code": "stisan",
+        "common_name": "Stilt Sandpiper",
+        "scientific_name": "Calidris himantopus"
+    },
+    {
+        "code4": "bbsa",
+        "code": "bubsan",
+        "common_name": "Buff-breasted Sandpiper",
+        "scientific_name": "Calidris subruficollis"
+    },
+    {
+        "code4": "sand",
+        "code": "sander",
+        "common_name": "Sanderling",
+        "scientific_name": "Calidris alba"
+    },
+    {
+        "code4": "dunl",
+        "code": "dunlin",
+        "common_name": "Dunlin",
+        "scientific_name": "Calidris alpina"
+    },
+    {
+        "code4": "pusa",
+        "code": "pursan",
+        "common_name": "Purple Sandpiper",
+        "scientific_name": "Calidris maritima"
+    },
+    {
+        "code4": "wrsa",
+        "code": "whrsan",
+        "common_name": "White-rumped Sandpiper",
+        "scientific_name": "Calidris fuscicollis"
+    },
+    {
+        "code4": "lesa",
+        "code": "leasan",
+        "common_name": "Least Sandpiper",
+        "scientific_name": "Calidris minutilla"
+    },
+    {
+        "code4": "pesa",
+        "code": "pecsan",
+        "common_name": "Pectoral Sandpiper",
+        "scientific_name": "Calidris melanotos"
+    },
+    {
+        "code4": "wesa",
+        "code": "wessan",
+        "common_name": "Western Sandpiper",
+        "scientific_name": "Calidris mauri"
+    },
+    {
+        "code4": "sesa",
+        "code": "semsan",
+        "common_name": "Semipalmated Sandpiper",
+        "scientific_name": "Calidris pusilla"
+    },
+    {
+        "code4": "paja",
+        "code": "parjae",
+        "common_name": "Parasitic Jaeger",
+        "scientific_name": "Stercorarius parasiticus"
+    },
+    {
+        "code4": "poja",
+        "code": "pomjae",
+        "common_name": "Pomarine Jaeger",
+        "scientific_name": "Stercorarius pomarinus"
+    },
+    {
+        "code4": "spsk",
+        "code": "sopsku1",
+        "common_name": "South Polar Skua",
+        "scientific_name": "Stercorarius maccormicki"
+    },
+    {
+        "code4": "razo",
+        "code": "razorb",
+        "common_name": "Razorbill",
+        "scientific_name": "Alca torda"
+    },
+    {
+        "code4": "dove",
+        "code": "doveki",
+        "common_name": "Dovekie",
+        "scientific_name": "Alle alle"
+    },
+    {
+        "code4": "blki",
+        "code": "bklkit",
+        "common_name": "Black-legged Kittiwake",
+        "scientific_name": "Rissa tridactyla"
+    },
+    {
+        "code4": "bogu",
+        "code": "bongul",
+        "common_name": "Bonaparte's Gull",
+        "scientific_name": "Chroicocephalus philadelphia"
+    },
+    {
+        "code4": "bhgu",
+        "code": "bkhgul",
+        "common_name": "Black-headed Gull",
+        "scientific_name": "Chroicocephalus ridibundus"
+    },
+    {
+        "code4": "lagu",
+        "code": "laugul",
+        "common_name": "Laughing Gull",
+        "scientific_name": "Leucophaeus atricilla"
+    },
+    {
+        "code4": "frgu",
+        "code": "fragul",
+        "common_name": "Franklin's Gull",
+        "scientific_name": "Leucophaeus pipixcan"
+    },
+    {
+        "code4": "sbig*",
+        "code": "mewgul2",
+        "common_name": "Short-billed Gull",
+        "scientific_name": "Larus brachyrhynchus"
+    },
+    {
+        "code4": "rbgu",
+        "code": "ribgul",
+        "common_name": "Ring-billed Gull",
+        "scientific_name": "Larus delawarensis"
+    },
+    {
+        "code4": "",
+        "code": "amhgul1",
+        "common_name": "American Herring Gull",
+        "alternative_names": ["Herring Gull"],
+        "scientific_name": "Larus smithsonianus"
+    },
+    {
+        "code4": "gbbg",
+        "code": "gbbgul",
+        "common_name": "Great Black-backed Gull",
+        "scientific_name": "Larus marinus"
+    },
+    {
+        "code4": "glgu",
+        "code": "glagul",
+        "common_name": "Glaucous Gull",
+        "scientific_name": "Larus hyperboreus"
+    },
+    {
+        "code4": "",
+        "code": "x01131",
+        "common_name": "American Herring x Glaucous Gull (hybrid)",
+        "scientific_name": "Larus smithsonianus x hyperboreus"
+    },
+    {
+        "code4": "lbbg",
+        "code": "lbbgul",
+        "common_name": "Lesser Black-backed Gull",
+        "scientific_name": "Larus fuscus"
+    },
+    {
+        "code4": "sbag*",
+        "code": "slbgul",
+        "common_name": "Slaty-backed Gull",
+        "scientific_name": "Larus schistisagus"
+    },
+    {
+        "code4": "icgu",
+        "code": "y00478",
+        "common_name": "Iceland Gull",
+        "scientific_name": "Larus glaucoides"
+    },
+    {
+        "code4": "blsk",
+        "code": "blkski",
+        "common_name": "Black Skimmer",
+        "scientific_name": "Rynchops niger"
+    },
+    {
+        "code4": "sote",
+        "code": "sooter1",
+        "common_name": "Sooty Tern",
+        "scientific_name": "Onychoprion fuscatus"
+    },
+    {
+        "code4": "brte",
+        "code": "briter1",
+        "common_name": "Bridled Tern",
+        "scientific_name": "Onychoprion anaethetus"
+    },
+    {
+        "code4": "lete",
+        "code": "leater1",
+        "common_name": "Least Tern",
+        "scientific_name": "Sternula antillarum"
+    },
+    {
+        "code4": "cate",
+        "code": "caster1",
+        "common_name": "Caspian Tern",
+        "scientific_name": "Hydroprogne caspia"
+    },
+    {
+        "code4": "blte",
+        "code": "blkter",
+        "common_name": "Black Tern",
+        "scientific_name": "Chlidonias niger"
+    },
+    {
+        "code4": "fote",
+        "code": "forter",
+        "common_name": "Forster's Tern",
+        "scientific_name": "Sterna forsteri"
+    },
+    {
+        "code4": "arte",
+        "code": "arcter",
+        "common_name": "Arctic Tern",
+        "scientific_name": "Sterna paradisaea"
+    },
+    {
+        "code4": "cote",
+        "code": "comter",
+        "common_name": "Common Tern",
+        "scientific_name": "Sterna hirundo"
+    },
+    {
+        "code4": "sate",
+        "code": "santer1",
+        "common_name": "Sandwich Tern",
+        "scientific_name": "Thalasseus sandvicensis"
+    },
+    {
+        "code4": "royt*",
+        "code": "royter1",
+        "common_name": "Royal Tern",
+        "scientific_name": "Thalasseus maximus"
+    },
+    {
+        "code4": "pbgr",
+        "code": "pibgre",
+        "common_name": "Pied-billed Grebe",
+        "scientific_name": "Podilymbus podiceps"
+    },
+    {
+        "code4": "hogr",
+        "code": "horgre",
+        "common_name": "Horned Grebe",
+        "scientific_name": "Podiceps auritus"
+    },
+    {
+        "code4": "rngr",
+        "code": "rengre",
+        "common_name": "Red-necked Grebe",
+        "scientific_name": "Podiceps grisegena"
+    },
+    {
+        "code4": "wttr",
+        "code": "whttro",
+        "common_name": "White-tailed Tropicbird",
+        "scientific_name": "Phaethon lepturus"
+    },
+    {
+        "code4": "rtlo",
+        "code": "retloo",
+        "common_name": "Red-throated Loon",
+        "scientific_name": "Gavia stellata"
+    },
+    {
+        "code4": "palo",
+        "code": "pacloo",
+        "common_name": "Pacific Loon",
+        "scientific_name": "Gavia pacifica"
+    },
+    {
+        "code4": "colo",
+        "code": "comloo",
+        "common_name": "Common Loon",
+        "scientific_name": "Gavia immer"
+    },
+    {
+        "code4": "wisp",
+        "code": "wispet",
+        "common_name": "Wilson's Storm-Petrel",
+        "scientific_name": "Oceanites oceanicus"
+    },
+    {
+        "code4": "wfsp",
+        "code": "wfspet",
+        "common_name": "White-faced Storm-Petrel",
+        "scientific_name": "Pelagodroma marina"
+    },
+    {
+        "code4": "lesp",
+        "code": "lcspet",
+        "common_name": "Leach's Storm-Petrel",
+        "scientific_name": "Hydrobates leucorhous"
+    },
+    {
+        "code4": "bstp*",
+        "code": "barpet",
+        "common_name": "Band-rumped Storm-Petrel",
+        "scientific_name": "Hydrobates castro"
+    },
+    {
+        "code4": "grsh",
+        "code": "greshe",
+        "common_name": "Great Shearwater",
+        "scientific_name": "Ardenna gravis"
+    },
+    {
+        "code4": "noga",
+        "code": "norgan",
+        "common_name": "Northern Gannet",
+        "scientific_name": "Morus bassanus"
+    },
+    {
+        "code4": "brbo",
+        "code": "brnboo",
+        "common_name": "Brown Booby",
+        "scientific_name": "Sula leucogaster"
+    },
+    {
+        "code4": "anhi",
+        "code": "anhing",
+        "common_name": "Anhinga",
+        "scientific_name": "Anhinga anhinga"
+    },
+    {
+        "code4": "grco",
+        "code": "grecor",
+        "common_name": "Great Cormorant",
+        "scientific_name": "Phalacrocorax carbo"
+    },
+    {
+        "code4": "dcco",
+        "code": "doccor",
+        "common_name": "Double-crested Cormorant",
+        "scientific_name": "Nannopterum auritum"
+    },
+    {
+        "code4": "glib",
+        "code": "gloibi",
+        "common_name": "Glossy Ibis",
+        "scientific_name": "Plegadis falcinellus"
+    },
+    {
+        "code4": "ambi",
+        "code": "amebit",
+        "common_name": "American Bittern",
+        "scientific_name": "Botaurus lentiginosus"
+    },
+    {
+        "code4": "lebi",
+        "code": "leabit",
+        "common_name": "Least Bittern",
+        "scientific_name": "Botaurus exilis"
+    },
+    {
+        "code4": "ycnh",
+        "code": "ycnher",
+        "common_name": "Yellow-crowned Night Heron",
+        "scientific_name": "Nyctanassa violacea"
+    },
+    {
+        "code4": "bcnh",
+        "code": "bcnher",
+        "common_name": "Black-crowned Night Heron",
+        "scientific_name": "Nycticorax nycticorax"
+    },
+    {
+        "code4": "lbhe",
+        "code": "libher",
+        "common_name": "Little Blue Heron",
+        "scientific_name": "Egretta caerulea"
+    },
+    {
+        "code4": "trhe",
+        "code": "triher",
+        "common_name": "Tricolored Heron",
+        "scientific_name": "Egretta tricolor"
+    },
+    {
+        "code4": "sneg",
+        "code": "snoegr",
+        "common_name": "Snowy Egret",
+        "scientific_name": "Egretta thula"
+    },
+    {
+        "code4": "grhe",
+        "code": "grnher",
+        "common_name": "Green Heron",
+        "scientific_name": "Butorides virescens"
+    },
+    {
+        "code4": "wece",
+        "code": "categr1",
+        "common_name": "Western Cattle-Egret",
+        "scientific_name": "Ardea ibis"
+    },
+    {
+        "code4": "greg",
+        "code": "greegr",
+        "common_name": "Great Egret",
+        "scientific_name": "Ardea alba"
+    },
+    {
+        "code4": "gbhe",
+        "code": "grbher3",
+        "common_name": "Great Blue Heron",
+        "scientific_name": "Ardea herodias"
+    },
+    {
+        "code4": "awpe",
+        "code": "amwpel",
+        "common_name": "American White Pelican",
+        "scientific_name": "Pelecanus erythrorhynchos"
+    },
+    {
+        "code4": "brpe",
+        "code": "brnpel",
+        "common_name": "Brown Pelican",
+        "scientific_name": "Pelecanus occidentalis"
+    },
+    {
+        "code4": "blvu",
+        "code": "blkvul",
+        "common_name": "Black Vulture",
+        "scientific_name": "Coragyps atratus"
+    },
+    {
+        "code4": "tuvu",
+        "code": "turvul",
+        "common_name": "Turkey Vulture",
+        "scientific_name": "Cathartes aura"
+    },
+    {
+        "code4": "ospr",
+        "code": "osprey",
+        "common_name": "Osprey",
+        "scientific_name": "Pandion haliaetus"
+    },
+    {
+        "code4": "stki",
+        "code": "swtkit",
+        "common_name": "Swallow-tailed Kite",
+        "scientific_name": "Elanoides forficatus"
+    },
+    {
+        "code4": "goea",
+        "code": "goleag",
+        "common_name": "Golden Eagle",
+        "scientific_name": "Aquila chrysaetos"
+    },
+    {
+        "code4": "ssha",
+        "code": "shshaw",
+        "common_name": "Sharp-shinned Hawk",
+        "scientific_name": "Accipiter striatus"
+    },
+    {
+        "code4": "coha",
+        "code": "coohaw",
+        "common_name": "Cooper's Hawk",
+        "scientific_name": "Astur cooperii"
+    },
+    {
+        "code4": "agos*",
+        "code": "norgos",
+        "common_name": "American Goshawk",
+        "scientific_name": "Astur atricapillus"
+    },
+    {
+        "code4": "noha",
+        "code": "norhar2",
+        "common_name": "Northern Harrier",
+        "scientific_name": "Circus hudsonius"
+    },
+    {
+        "code4": "baea",
+        "code": "baleag",
+        "common_name": "Bald Eagle",
+        "scientific_name": "Haliaeetus leucocephalus"
+    },
+    {
+        "code4": "miki",
+        "code": "miskit",
+        "common_name": "Mississippi Kite",
+        "scientific_name": "Ictinia mississippiensis"
+    },
+    {
+        "code4": "bwha",
+        "code": "brwhaw",
+        "common_name": "Broad-winged Hawk",
+        "scientific_name": "Buteo platypterus"
+    },
+    {
+        "code4": "rsha",
+        "code": "reshaw",
+        "common_name": "Red-shouldered Hawk",
+        "scientific_name": "Buteo lineatus"
+    },
+    {
+        "code4": "swha",
+        "code": "swahaw",
+        "common_name": "Swainson's Hawk",
+        "scientific_name": "Buteo swainsoni"
+    },
+    {
+        "code4": "rtha",
+        "code": "rethaw",
+        "common_name": "Red-tailed Hawk",
+        "scientific_name": "Buteo jamaicensis"
+    },
+    {
+        "code4": "rlha",
+        "code": "rolhaw",
+        "common_name": "Rough-legged Hawk",
+        "scientific_name": "Buteo lagopus"
+    },
+    {
+        "code4": "abow",
+        "code": "brnowl",
+        "common_name": "American Barn Owl",
+        "scientific_name": "Tyto furcata"
+    },
+    {
+        "code4": "easo",
+        "code": "easowl1",
+        "common_name": "Eastern Screech-Owl",
+        "scientific_name": "Megascops asio"
+    },
+    {
+        "code4": "snow",
+        "code": "snoowl1",
+        "common_name": "Snowy Owl",
+        "scientific_name": "Bubo scandiacus"
+    },
+    {
+        "code4": "ghow",
+        "code": "grhowl",
+        "common_name": "Great Horned Owl",
+        "scientific_name": "Bubo virginianus"
+    },
+    {
+        "code4": "",
+        "code": "eueowl1",
+        "common_name": "Eurasian Eagle-Owl",
+        "scientific_name": "Bubo bubo"
+    },
+    {
+        "code4": "baow",
+        "code": "brdowl",
+        "common_name": "Barred Owl",
+        "scientific_name": "Strix varia"
+    },
+    {
+        "code4": "leow",
+        "code": "loeowl",
+        "common_name": "Long-eared Owl",
+        "scientific_name": "Asio otus"
+    },
+    {
+        "code4": "seow",
+        "code": "sheowl",
+        "common_name": "Short-eared Owl",
+        "scientific_name": "Asio flammeus"
+    },
+    {
+        "code4": "boow",
+        "code": "borowl",
+        "common_name": "Boreal Owl",
+        "scientific_name": "Aegolius funereus"
+    },
+    {
+        "code4": "nswo",
+        "code": "nswowl",
+        "common_name": "Northern Saw-whet Owl",
+        "scientific_name": "Aegolius acadicus"
+    },
+    {
+        "code4": "beki",
+        "code": "belkin1",
+        "common_name": "Belted Kingfisher",
+        "scientific_name": "Megaceryle alcyon"
+    },
+    {
+        "code4": "ybsa",
+        "code": "yebsap",
+        "common_name": "Yellow-bellied Sapsucker",
+        "scientific_name": "Sphyrapicus varius"
+    },
+    {
+        "code4": "rhwo",
+        "code": "rehwoo",
+        "common_name": "Red-headed Woodpecker",
+        "scientific_name": "Melanerpes erythrocephalus"
+    },
+    {
+        "code4": "rbwo",
+        "code": "rebwoo",
+        "common_name": "Red-bellied Woodpecker",
+        "scientific_name": "Melanerpes carolinus"
+    },
+    {
+        "code4": "bbwo",
+        "code": "bkbwoo",
+        "common_name": "Black-backed Woodpecker",
+        "scientific_name": "Picoides arcticus"
+    },
+    {
+        "code4": "dowo",
+        "code": "dowwoo",
+        "common_name": "Downy Woodpecker",
+        "scientific_name": "Dryobates pubescens"
+    },
+    {
+        "code4": "hawo",
+        "code": "haiwoo",
+        "common_name": "Hairy Woodpecker",
+        "scientific_name": "Dryobates villosus"
+    },
+    {
+        "code4": "piwo",
+        "code": "pilwoo",
+        "common_name": "Pileated Woodpecker",
+        "scientific_name": "Dryocopus pileatus"
+    },
+    {
+        "code4": "nofl",
+        "code": "norfli",
+        "common_name": "Northern Flicker",
+        "scientific_name": "Colaptes auratus"
+    },
+    {
+        "code4": "amke",
+        "code": "amekes",
+        "common_name": "American Kestrel",
+        "scientific_name": "Falco sparverius"
+    },
+    {
+        "code4": "merl",
+        "code": "merlin",
+        "common_name": "Merlin",
+        "scientific_name": "Falco columbarius"
+    },
+    {
+        "code4": "pefa",
+        "code": "perfal",
+        "common_name": "Peregrine Falcon",
+        "scientific_name": "Falco peregrinus"
+    },
+    {
+        "code4": "",
+        "code": "cockat",
+        "common_name": "Cockatiel",
+        "scientific_name": "Nymphicus hollandicus"
+    },
+    {
+        "code4": "",
+        "code": "budger",
+        "common_name": "Budgerigar",
+        "scientific_name": "Melopsittacus undulatus"
+    },
+    {
+        "code4": "",
+        "code": "grepar",
+        "common_name": "Gray Parrot",
+        "scientific_name": "Psittacus erithacus"
+    },
+    {
+        "code4": "mopa",
+        "code": "monpar",
+        "common_name": "Monk Parakeet",
+        "scientific_name": "Myiopsitta monachus"
+    },
+    {
+        "code4": "wwpa",
+        "code": "whwpar",
+        "common_name": "White-winged Parakeet",
+        "scientific_name": "Brotogeris versicolurus"
+    },
+    {
+        "code4": "mipa",
+        "code": "mitpar",
+        "common_name": "Mitred Parakeet",
+        "scientific_name": "Psittacara mitratus"
+    },
+    {
+        "code4": "osfl",
+        "code": "olsfly",
+        "common_name": "Olive-sided Flycatcher",
+        "scientific_name": "Contopus cooperi"
+    },
+    {
+        "code4": "eawp",
+        "code": "eawpew",
+        "common_name": "Eastern Wood-Pewee",
+        "scientific_name": "Contopus virens"
+    },
+    {
+        "code4": "ybfl",
+        "code": "yebfly",
+        "common_name": "Yellow-bellied Flycatcher",
+        "scientific_name": "Empidonax flaviventris"
+    },
+    {
+        "code4": "acfl",
+        "code": "acafly",
+        "common_name": "Acadian Flycatcher",
+        "scientific_name": "Empidonax virescens"
+    },
+    {
+        "code4": "alfl",
+        "code": "aldfly",
+        "common_name": "Alder Flycatcher",
+        "scientific_name": "Empidonax alnorum"
+    },
+    {
+        "code4": "wifl",
+        "code": "wilfly",
+        "common_name": "Willow Flycatcher",
+        "scientific_name": "Empidonax traillii"
+    },
+    {
+        "code4": "lefl",
+        "code": "leafly",
+        "common_name": "Least Flycatcher",
+        "scientific_name": "Empidonax minimus"
+    },
+    {
+        "code4": "hafl",
+        "code": "hamfly",
+        "common_name": "Hammond's Flycatcher",
+        "scientific_name": "Empidonax hammondii"
+    },
+    {
+        "code4": "wefl",
+        "code": "wesfly",
+        "common_name": "Western Flycatcher",
+        "scientific_name": "Empidonax difficilis"
+    },
+    {
+        "code4": "eaph",
+        "code": "easpho",
+        "common_name": "Eastern Phoebe",
+        "scientific_name": "Sayornis phoebe"
+    },
+    {
+        "code4": "atfl",
+        "code": "astfly",
+        "common_name": "Ash-throated Flycatcher",
+        "scientific_name": "Myiarchus cinerascens"
+    },
+    {
+        "code4": "gcfl",
+        "code": "grcfly",
+        "common_name": "Great Crested Flycatcher",
+        "scientific_name": "Myiarchus crinitus"
+    },
+    {
+        "code4": "coki",
+        "code": "coukin",
+        "common_name": "Couch's Kingbird",
+        "scientific_name": "Tyrannus couchii"
+    },
+    {
+        "code4": "weki",
+        "code": "weskin",
+        "common_name": "Western Kingbird",
+        "scientific_name": "Tyrannus verticalis"
+    },
+    {
+        "code4": "eaki",
+        "code": "easkin",
+        "common_name": "Eastern Kingbird",
+        "scientific_name": "Tyrannus tyrannus"
+    },
+    {
+        "code4": "wevi",
+        "code": "whevir",
+        "common_name": "White-eyed Vireo",
+        "scientific_name": "Vireo griseus"
+    },
+    {
+        "code4": "bevi",
+        "code": "belvir",
+        "common_name": "Bell's Vireo",
+        "scientific_name": "Vireo bellii"
+    },
+    {
+        "code4": "ytvi",
+        "code": "yetvir",
+        "common_name": "Yellow-throated Vireo",
+        "scientific_name": "Vireo flavifrons"
+    },
+    {
+        "code4": "bhvi",
+        "code": "buhvir",
+        "common_name": "Blue-headed Vireo",
+        "scientific_name": "Vireo solitarius"
+    },
+    {
+        "code4": "phvi",
+        "code": "phivir",
+        "common_name": "Philadelphia Vireo",
+        "scientific_name": "Vireo philadelphicus"
+    },
+    {
+        "code4": "wavi",
+        "code": "warvir",
+        "common_name": "Warbling Vireo",
+        "scientific_name": "Vireo gilvus"
+    },
+    {
+        "code4": "revi",
+        "code": "reevir1",
+        "common_name": "Red-eyed Vireo",
+        "scientific_name": "Vireo olivaceus"
+    },
+    {
+        "code4": "losh",
+        "code": "logshr",
+        "common_name": "Loggerhead Shrike",
+        "scientific_name": "Lanius ludovicianus"
+    },
+    {
+        "code4": "nshr*",
+        "code": "norshr4",
+        "common_name": "Northern Shrike",
+        "scientific_name": "Lanius borealis"
+    },
+    {
+        "code4": "blja",
+        "code": "blujay",
+        "common_name": "Blue Jay",
+        "scientific_name": "Cyanocitta cristata"
+    },
+    {
+        "code4": "amcr",
+        "code": "amecro",
+        "common_name": "American Crow",
+        "scientific_name": "Corvus brachyrhynchos"
+    },
+    {
+        "code4": "ficr",
+        "code": "fiscro",
+        "common_name": "Fish Crow",
+        "scientific_name": "Corvus ossifragus"
+    },
+    {
+        "code4": "cora",
+        "code": "comrav",
+        "common_name": "Common Raven",
+        "scientific_name": "Corvus corax"
+    },
+    {
+        "code4": "bcch",
+        "code": "bkcchi",
+        "common_name": "Black-capped Chickadee",
+        "scientific_name": "Poecile atricapillus"
+    },
+    {
+        "code4": "boch",
+        "code": "borchi2",
+        "common_name": "Boreal Chickadee",
+        "scientific_name": "Poecile hudsonicus"
+    },
+    {
+        "code4": "tuti",
+        "code": "tuftit",
+        "common_name": "Tufted Titmouse",
+        "scientific_name": "Baeolophus bicolor"
+    },
+    {
+        "code4": "hola",
+        "code": "horlar",
+        "common_name": "Horned Lark",
+        "scientific_name": "Eremophila alpestris"
+    },
+    {
+        "code4": "bans*",
+        "code": "banswa",
+        "common_name": "Bank Swallow",
+        "scientific_name": "Riparia riparia"
+    },
+    {
+        "code4": "tres*",
+        "code": "treswa",
+        "common_name": "Tree Swallow",
+        "scientific_name": "Tachycineta bicolor"
+    },
+    {
+        "code4": "puma",
+        "code": "purmar",
+        "common_name": "Purple Martin",
+        "scientific_name": "Progne subis"
+    },
+    {
+        "code4": "nrws",
+        "code": "nrwswa",
+        "common_name": "Northern Rough-winged Swallow",
+        "scientific_name": "Stelgidopteryx serripennis"
+    },
+    {
+        "code4": "bars*",
+        "code": "barswa",
+        "common_name": "Barn Swallow",
+        "scientific_name": "Hirundo rustica"
+    },
+    {
+        "code4": "clsw",
+        "code": "cliswa",
+        "common_name": "Cliff Swallow",
+        "scientific_name": "Petrochelidon pyrrhonota"
+    },
+    {
+        "code4": "",
+        "code": "x00717",
+        "common_name": "Barn x Cliff Swallow (hybrid)",
+        "scientific_name": "Hirundo rustica x Petrochelidon pyrrhonota"
+    },
+    {
+        "code4": "casw",
+        "code": "cavswa",
+        "common_name": "Cave Swallow",
+        "scientific_name": "Petrochelidon fulva"
+    },
+    {
+        "code4": "rcki",
+        "code": "ruckin",
+        "common_name": "Ruby-crowned Kinglet",
+        "scientific_name": "Corthylio calendula"
+    },
+    {
+        "code4": "gcki",
+        "code": "gockin",
+        "common_name": "Golden-crowned Kinglet",
+        "scientific_name": "Regulus satrapa"
+    },
+    {
+        "code4": "wbnu",
+        "code": "whbnut",
+        "common_name": "White-breasted Nuthatch",
+        "scientific_name": "Sitta carolinensis"
+    },
+    {
+        "code4": "rbnu",
+        "code": "rebnut",
+        "common_name": "Red-breasted Nuthatch",
+        "scientific_name": "Sitta canadensis"
+    },
+    {
+        "code4": "brcr",
+        "code": "brncre",
+        "common_name": "Brown Creeper",
+        "scientific_name": "Certhia americana"
+    },
+    {
+        "code4": "bggn",
+        "code": "buggna",
+        "common_name": "Blue-gray Gnatcatcher",
+        "scientific_name": "Polioptila caerulea"
+    },
+    {
+        "code4": "nhwr",
+        "code": "houwre",
+        "common_name": "Northern House Wren",
+        "alternative_names": ["House Wren"],
+        "scientific_name": "Troglodytes aedon"
+    },
+    {
+        "code4": "wiwr",
+        "code": "winwre3",
+        "common_name": "Winter Wren",
+        "scientific_name": "Troglodytes hiemalis"
+    },
+    {
+        "code4": "sewr",
+        "code": "sedwre1",
+        "common_name": "Sedge Wren",
+        "scientific_name": "Cistothorus stellaris"
+    },
+    {
+        "code4": "mawr",
+        "code": "marwre",
+        "common_name": "Marsh Wren",
+        "scientific_name": "Cistothorus palustris"
+    },
+    {
+        "code4": "carw*",
+        "code": "carwre",
+        "common_name": "Carolina Wren",
+        "scientific_name": "Thryothorus ludovicianus"
+    },
+    {
+        "code4": "bewr",
+        "code": "bewwre",
+        "common_name": "Bewick's Wren",
+        "scientific_name": "Thryomanes bewickii"
+    },
+    {
+        "code4": "eust",
+        "code": "eursta",
+        "common_name": "European Starling",
+        "scientific_name": "Sturnus vulgaris"
+    },
+    {
+        "code4": "grca",
+        "code": "grycat",
+        "common_name": "Gray Catbird",
+        "scientific_name": "Dumetella carolinensis"
+    },
+    {
+        "code4": "brth",
+        "code": "brnthr",
+        "common_name": "Brown Thrasher",
+        "scientific_name": "Toxostoma rufum"
+    },
+    {
+        "code4": "nomo",
+        "code": "normoc",
+        "common_name": "Northern Mockingbird",
+        "scientific_name": "Mimus polyglottos"
+    },
+    {
+        "code4": "eabl",
+        "code": "easblu",
+        "common_name": "Eastern Bluebird",
+        "scientific_name": "Sialia sialis"
+    },
+    {
+        "code4": "vath",
+        "code": "varthr",
+        "common_name": "Varied Thrush",
+        "scientific_name": "Ixoreus naevius"
+    },
+    {
+        "code4": "veer",
+        "code": "veery",
+        "common_name": "Veery",
+        "scientific_name": "Catharus fuscescens"
+    },
+    {
+        "code4": "gcth",
+        "code": "gycthr",
+        "common_name": "Gray-cheeked Thrush",
+        "scientific_name": "Catharus minimus"
+    },
+    {
+        "code4": "bith",
+        "code": "bicthr",
+        "common_name": "Bicknell's Thrush",
+        "scientific_name": "Catharus bicknelli"
+    },
+    {
+        "code4": "swth",
+        "code": "swathr",
+        "common_name": "Swainson's Thrush",
+        "scientific_name": "Catharus ustulatus"
+    },
+    {
+        "code4": "heth",
+        "code": "herthr",
+        "common_name": "Hermit Thrush",
+        "scientific_name": "Catharus guttatus"
+    },
+    {
+        "code4": "woth",
+        "code": "woothr",
+        "common_name": "Wood Thrush",
+        "scientific_name": "Hylocichla mustelina"
+    },
+    {
+        "code4": "amro",
+        "code": "amerob",
+        "common_name": "American Robin",
+        "scientific_name": "Turdus migratorius"
+    },
+    {
+        "code4": "nowh",
+        "code": "norwhe",
+        "common_name": "Northern Wheatear",
+        "scientific_name": "Oenanthe oenanthe"
+    },
+    {
+        "code4": "cedw*",
+        "code": "cedwax",
+        "common_name": "Cedar Waxwing",
+        "scientific_name": "Bombycilla cedrorum"
+    },
+    {
+        "code4": "nrbi",
+        "code": "orabis1",
+        "common_name": "Northern Red Bishop",
+        "scientific_name": "Euplectes franciscanus"
+    },
+    {
+        "code4": "",
+        "code": "redbis",
+        "common_name": "Southern Red Bishop",
+        "scientific_name": "Euplectes orix"
+    },
+    {
+        "code4": "",
+        "code": "recwid3",
+        "common_name": "Red-collared Widowbird",
+        "scientific_name": "Euplectes ardens"
+    },
+    {
+        "code4": "",
+        "code": "reccor",
+        "common_name": "Red-cheeked Cordonbleu",
+        "scientific_name": "Uraeginthus bengalus"
+    },
+    {
+        "code4": "ptwh",
+        "code": "pitwhy",
+        "common_name": "Pin-tailed Whydah",
+        "scientific_name": "Vidua macroura"
+    },
+    {
+        "code4": "hosp",
+        "code": "houspa",
+        "common_name": "House Sparrow",
+        "scientific_name": "Passer domesticus"
+    },
+    {
+        "code4": "ampi",
+        "code": "amepip",
+        "common_name": "American Pipit",
+        "scientific_name": "Anthus rubescens"
+    },
+    {
+        "code4": "ccha*",
+        "code": "comcha",
+        "common_name": "Common Chaffinch",
+        "scientific_name": "Fringilla coelebs"
+    },
+    {
+        "code4": "evgr",
+        "code": "evegro",
+        "common_name": "Evening Grosbeak",
+        "scientific_name": "Coccothraustes vespertinus"
+    },
+    {
+        "code4": "pigr",
+        "code": "pingro",
+        "common_name": "Pine Grosbeak",
+        "scientific_name": "Pinicola enucleator"
+    },
+    {
+        "code4": "hofi",
+        "code": "houfin",
+        "common_name": "House Finch",
+        "scientific_name": "Haemorhous mexicanus"
+    },
+    {
+        "code4": "pufi",
+        "code": "purfin",
+        "common_name": "Purple Finch",
+        "scientific_name": "Haemorhous purpureus"
+    },
+    {
+        "code4": "yfca",
+        "code": "yefcan",
+        "common_name": "Yellow-fronted Canary",
+        "scientific_name": "Crithagra mozambica"
+    },
+    {
+        "code4": "redp",
+        "code": "redpol1",
+        "common_name": "Redpoll",
+        "scientific_name": "Acanthis flammea"
+    },
+    {
+        "code4": "recr",
+        "code": "redcro",
+        "common_name": "Red Crossbill",
+        "scientific_name": "Loxia curvirostra"
+    },
+    {
+        "code4": "wwcr",
+        "code": "whwcro",
+        "common_name": "White-winged Crossbill",
+        "scientific_name": "Loxia leucoptera"
+    },
+    {
+        "code4": "egol*",
+        "code": "eurgol",
+        "common_name": "European Goldfinch",
+        "scientific_name": "Carduelis carduelis"
+    },
+    {
+        "code4": "pisi",
+        "code": "pinsis",
+        "common_name": "Pine Siskin",
+        "scientific_name": "Spinus pinus"
+    },
+    {
+        "code4": "agol*",
+        "code": "amegfi",
+        "common_name": "American Goldfinch",
+        "scientific_name": "Spinus tristis"
+    },
+    {
+        "code4": "lalo",
+        "code": "laplon",
+        "common_name": "Lapland Longspur",
+        "scientific_name": "Calcarius lapponicus"
+    },
+    {
+        "code4": "smlo",
+        "code": "smilon",
+        "common_name": "Smith's Longspur",
+        "scientific_name": "Calcarius pictus"
+    },
+    {
+        "code4": "snbu",
+        "code": "snobun",
+        "common_name": "Snow Bunting",
+        "scientific_name": "Plectrophenax nivalis"
+    },
+    {
+        "code4": "grsp",
+        "code": "graspa",
+        "common_name": "Grasshopper Sparrow",
+        "scientific_name": "Ammodramus savannarum"
+    },
+    {
+        "code4": "chsp",
+        "code": "chispa",
+        "common_name": "Chipping Sparrow",
+        "scientific_name": "Spizella passerina"
+    },
+    {
+        "code4": "ccsp",
+        "code": "clcspa",
+        "common_name": "Clay-colored Sparrow",
+        "scientific_name": "Spizella pallida"
+    },
+    {
+        "code4": "fisp",
+        "code": "fiespa",
+        "common_name": "Field Sparrow",
+        "scientific_name": "Spizella pusilla"
+    },
+    {
+        "code4": "",
+        "code": "x00200",
+        "common_name": "Clay-colored x Field Sparrow (hybrid)",
+        "scientific_name": "Spizella pallida x pusilla"
+    },
+    {
+        "code4": "lasp",
+        "code": "larspa",
+        "common_name": "Lark Sparrow",
+        "scientific_name": "Chondestes grammacus"
+    },
+    {
+        "code4": "atsp",
+        "code": "amtspa",
+        "common_name": "American Tree Sparrow",
+        "scientific_name": "Spizelloides arborea"
+    },
+    {
+        "code4": "fosp",
+        "code": "foxspa",
+        "common_name": "Fox Sparrow",
+        "scientific_name": "Passerella iliaca"
+    },
+    {
+        "code4": "deju",
+        "code": "daejun",
+        "common_name": "Dark-eyed Junco",
+        "scientific_name": "Junco hyemalis"
+    },
+    {
+        "code4": "wcsp",
+        "code": "whcspa",
+        "common_name": "White-crowned Sparrow",
+        "scientific_name": "Zonotrichia leucophrys"
+    },
+    {
+        "code4": "hasp",
+        "code": "harspa",
+        "common_name": "Harris's Sparrow",
+        "scientific_name": "Zonotrichia querula"
+    },
+    {
+        "code4": "wtsp",
+        "code": "whtspa",
+        "common_name": "White-throated Sparrow",
+        "scientific_name": "Zonotrichia albicollis"
+    },
+    {
+        "code4": "",
+        "code": "x00039",
+        "common_name": "Dark-eyed Junco x White-throated Sparrow (hybrid)",
+        "scientific_name": "Junco hyemalis x Zonotrichia albicollis"
+    },
+    {
+        "code4": "vesp",
+        "code": "vesspa",
+        "common_name": "Vesper Sparrow",
+        "scientific_name": "Pooecetes gramineus"
+    },
+    {
+        "code4": "lcsp",
+        "code": "lecspa",
+        "common_name": "LeConte's Sparrow",
+        "scientific_name": "Ammospiza leconteii"
+    },
+    {
+        "code4": "sesp",
+        "code": "seaspa",
+        "common_name": "Seaside Sparrow",
+        "scientific_name": "Ammospiza maritima"
+    },
+    {
+        "code4": "nesp",
+        "code": "nstspa",
+        "common_name": "Nelson's Sparrow",
+        "scientific_name": "Ammospiza nelsoni"
+    },
+    {
+        "code4": "sals*",
+        "code": "sstspa",
+        "common_name": "Saltmarsh Sparrow",
+        "scientific_name": "Ammospiza caudacuta"
+    },
+    {
+        "code4": "",
+        "code": "x00450",
+        "common_name": "Nelson's x Saltmarsh Sparrow (hybrid)",
+        "scientific_name": "Ammospiza nelsoni x caudacuta"
+    },
+    {
+        "code4": "savs*",
+        "code": "savspa",
+        "common_name": "Savannah Sparrow",
+        "scientific_name": "Passerculus sandwichensis"
+    },
+    {
+        "code4": "bais*",
+        "code": "baispa",
+        "common_name": "Baird's Sparrow",
+        "scientific_name": "Centronyx bairdii"
+    },
+    {
+        "code4": "hesp",
+        "code": "henspa",
+        "common_name": "Henslow's Sparrow",
+        "scientific_name": "Centronyx henslowii"
+    },
+    {
+        "code4": "sosp",
+        "code": "sonspa",
+        "common_name": "Song Sparrow",
+        "scientific_name": "Melospiza melodia"
+    },
+    {
+        "code4": "lisp",
+        "code": "linspa",
+        "common_name": "Lincoln's Sparrow",
+        "scientific_name": "Melospiza lincolnii"
+    },
+    {
+        "code4": "swsp",
+        "code": "swaspa",
+        "common_name": "Swamp Sparrow",
+        "scientific_name": "Melospiza georgiana"
+    },
+    {
+        "code4": "eato",
+        "code": "eastow",
+        "common_name": "Eastern Towhee",
+        "scientific_name": "Pipilo erythrophthalmus"
+    },
+    {
+        "code4": "",
+        "code": "x00446",
+        "common_name": "Spotted x Eastern Towhee (hybrid)",
+        "scientific_name": "Pipilo maculatus x erythrophthalmus"
+    },
+    {
+        "code4": "ybch",
+        "code": "yebcha",
+        "common_name": "Yellow-breasted Chat",
+        "scientific_name": "Icteria virens"
+    },
+    {
+        "code4": "yhbl",
+        "code": "yehbla",
+        "common_name": "Yellow-headed Blackbird",
+        "scientific_name": "Xanthocephalus xanthocephalus"
+    },
+    {
+        "code4": "bobo",
+        "code": "boboli",
+        "common_name": "Bobolink",
+        "scientific_name": "Dolichonyx oryzivorus"
+    },
+    {
+        "code4": "eame",
+        "code": "easmea",
+        "common_name": "Eastern Meadowlark",
+        "scientific_name": "Sturnella magna"
+    },
+    {
+        "code4": "oror",
+        "code": "orcori",
+        "common_name": "Orchard Oriole",
+        "scientific_name": "Icterus spurius"
+    },
+    {
+        "code4": "baor",
+        "code": "balori",
+        "common_name": "Baltimore Oriole",
+        "scientific_name": "Icterus galbula"
+    },
+    {
+        "code4": "scor",
+        "code": "scoori",
+        "common_name": "Scott's Oriole",
+        "scientific_name": "Icterus parisorum"
+    },
+    {
+        "code4": "rwbl",
+        "code": "rewbla",
+        "common_name": "Red-winged Blackbird",
+        "scientific_name": "Agelaius phoeniceus"
+    },
+    {
+        "code4": "bhco",
+        "code": "bnhcow",
+        "common_name": "Brown-headed Cowbird",
+        "scientific_name": "Molothrus ater"
+    },
+    {
+        "code4": "rubl",
+        "code": "rusbla",
+        "common_name": "Rusty Blackbird",
+        "scientific_name": "Euphagus carolinus"
+    },
+    {
+        "code4": "brbl",
+        "code": "brebla",
+        "common_name": "Brewer's Blackbird",
+        "scientific_name": "Euphagus cyanocephalus"
+    },
+    {
+        "code4": "cogr",
+        "code": "comgra",
+        "common_name": "Common Grackle",
+        "scientific_name": "Quiscalus quiscula"
+    },
+    {
+        "code4": "btgr",
+        "code": "botgra",
+        "common_name": "Boat-tailed Grackle",
+        "scientific_name": "Quiscalus major"
+    },
+    {
+        "code4": "oven",
+        "code": "ovenbi1",
+        "common_name": "Ovenbird",
+        "scientific_name": "Seiurus aurocapilla"
+    },
+    {
+        "code4": "wewa",
+        "code": "woewar1",
+        "common_name": "Worm-eating Warbler",
+        "scientific_name": "Helmitheros vermivorum"
+    },
+    {
+        "code4": "lowa",
+        "code": "louwat",
+        "common_name": "Louisiana Waterthrush",
+        "scientific_name": "Parkesia motacilla"
+    },
+    {
+        "code4": "nowa",
+        "code": "norwat",
+        "common_name": "Northern Waterthrush",
+        "scientific_name": "Parkesia noveboracensis"
+    },
+    {
+        "code4": "gwwa",
+        "code": "gowwar",
+        "common_name": "Golden-winged Warbler",
+        "scientific_name": "Vermivora chrysoptera"
+    },
+    {
+        "code4": "bwwa",
+        "code": "buwwar",
+        "common_name": "Blue-winged Warbler",
+        "scientific_name": "Vermivora cyanoptera"
+    },
+    {
+        "code4": "",
+        "code": "x00669",
+        "common_name": "Golden-winged x Blue-winged Warbler (hybrid)",
+        "scientific_name": "Vermivora chrysoptera x cyanoptera"
+    },
+    {
+        "code4": "",
+        "code": "brewar",
+        "common_name": "Brewster's Warbler (hybrid)",
+        "scientific_name": "Vermivora chrysoptera x cyanoptera (F1 hybrid)"
+    },
+    {
+        "code4": "",
+        "code": "lawwar",
+        "common_name": "Lawrence's Warbler (hybrid)",
+        "scientific_name": "Vermivora chrysoptera x cyanoptera (F2 backcross)"
+    },
+    {
+        "code4": "baww",
+        "code": "bawwar",
+        "common_name": "Black-and-white Warbler",
+        "scientific_name": "Mniotilta varia"
+    },
+    {
+        "code4": "prow*",
+        "code": "prowar",
+        "common_name": "Prothonotary Warbler",
+        "scientific_name": "Protonotaria citrea"
+    },
+    {
+        "code4": "swwa",
+        "code": "swawar",
+        "common_name": "Swainson's Warbler",
+        "scientific_name": "Limnothlypis swainsonii"
+    },
+    {
+        "code4": "tewa",
+        "code": "tenwar",
+        "common_name": "Tennessee Warbler",
+        "scientific_name": "Leiothlypis peregrina"
+    },
+    {
+        "code4": "ocwa",
+        "code": "orcwar",
+        "common_name": "Orange-crowned Warbler",
+        "scientific_name": "Leiothlypis celata"
+    },
+    {
+        "code4": "nawa",
+        "code": "naswar",
+        "common_name": "Nashville Warbler",
+        "scientific_name": "Leiothlypis ruficapilla"
+    },
+    {
+        "code4": "conw*",
+        "code": "conwar",
+        "common_name": "Connecticut Warbler",
+        "scientific_name": "Oporornis agilis"
+    },
+    {
+        "code4": "mgwa",
+        "code": "macwar",
+        "common_name": "MacGillivray's Warbler",
+        "scientific_name": "Geothlypis tolmiei"
+    },
+    {
+        "code4": "mowa",
+        "code": "mouwar",
+        "common_name": "Mourning Warbler",
+        "scientific_name": "Geothlypis philadelphia"
+    },
+    {
+        "code4": "kewa",
+        "code": "kenwar",
+        "common_name": "Kentucky Warbler",
+        "scientific_name": "Geothlypis formosa"
+    },
+    {
+        "code4": "coye",
+        "code": "comyel",
+        "common_name": "Common Yellowthroat",
+        "scientific_name": "Geothlypis trichas"
+    },
+    {
+        "code4": "howa",
+        "code": "hoowar",
+        "common_name": "Hooded Warbler",
+        "scientific_name": "Setophaga citrina"
+    },
+    {
+        "code4": "amre",
+        "code": "amered",
+        "common_name": "American Redstart",
+        "scientific_name": "Setophaga ruticilla"
+    },
+    {
+        "code4": "kiwa",
+        "code": "kirwar",
+        "common_name": "Kirtland's Warbler",
+        "scientific_name": "Setophaga kirtlandii"
+    },
+    {
+        "code4": "cmwa",
+        "code": "camwar",
+        "common_name": "Cape May Warbler",
+        "scientific_name": "Setophaga tigrina"
+    },
+    {
+        "code4": "cerw*",
+        "code": "cerwar",
+        "common_name": "Cerulean Warbler",
+        "scientific_name": "Setophaga cerulea"
+    },
+    {
+        "code4": "nopa",
+        "code": "norpar",
+        "common_name": "Northern Parula",
+        "scientific_name": "Setophaga americana"
+    },
+    {
+        "code4": "mawa",
+        "code": "magwar",
+        "common_name": "Magnolia Warbler",
+        "scientific_name": "Setophaga magnolia"
+    },
+    {
+        "code4": "bbwa",
+        "code": "babwar",
+        "common_name": "Bay-breasted Warbler",
+        "scientific_name": "Setophaga castanea"
+    },
+    {
+        "code4": "blbw*",
+        "code": "bkbwar",
+        "common_name": "Blackburnian Warbler",
+        "scientific_name": "Setophaga fusca"
+    },
+    {
+        "code4": "yewa",
+        "code": "yelwar",
+        "common_name": "Yellow Warbler",
+        "scientific_name": "Setophaga petechia"
+    },
+    {
+        "code4": "cswa",
+        "code": "chswar",
+        "common_name": "Chestnut-sided Warbler",
+        "scientific_name": "Setophaga pensylvanica"
+    },
+    {
+        "code4": "blpw*",
+        "code": "bkpwar",
+        "common_name": "Blackpoll Warbler",
+        "scientific_name": "Setophaga striata"
+    },
+    {
+        "code4": "btbw",
+        "code": "btbwar",
+        "common_name": "Black-throated Blue Warbler",
+        "scientific_name": "Setophaga caerulescens"
+    },
+    {
+        "code4": "pawa",
+        "code": "palwar",
+        "common_name": "Palm Warbler",
+        "scientific_name": "Setophaga palmarum"
+    },
+    {
+        "code4": "piwa",
+        "code": "pinwar",
+        "common_name": "Pine Warbler",
+        "scientific_name": "Setophaga pinus"
+    },
+    {
+        "code4": "yrwa",
+        "code": "yerwar",
+        "common_name": "Yellow-rumped Warbler",
+        "scientific_name": "Setophaga coronata"
+    },
+    {
+        "code4": "ytwa",
+        "code": "yetwar",
+        "common_name": "Yellow-throated Warbler",
+        "scientific_name": "Setophaga dominica"
+    },
+    {
+        "code4": "praw*",
+        "code": "prawar",
+        "common_name": "Prairie Warbler",
+        "scientific_name": "Setophaga discolor"
+    },
+    {
+        "code4": "btyw*",
+        "code": "btywar",
+        "common_name": "Black-throated Gray Warbler",
+        "scientific_name": "Setophaga nigrescens"
+    },
+    {
+        "code4": "hewa",
+        "code": "herwar",
+        "common_name": "Hermit Warbler",
+        "scientific_name": "Setophaga occidentalis"
+    },
+    {
+        "code4": "btnw*",
+        "code": "btnwar",
+        "common_name": "Black-throated Green Warbler",
+        "scientific_name": "Setophaga virens"
+    },
+    {
+        "code4": "cawa",
+        "code": "canwar",
+        "common_name": "Canada Warbler",
+        "scientific_name": "Cardellina canadensis"
+    },
+    {
+        "code4": "wiwa",
+        "code": "wlswar",
+        "common_name": "Wilson's Warbler",
+        "scientific_name": "Cardellina pusilla"
+    },
+    {
+        "code4": "suta",
+        "code": "sumtan",
+        "common_name": "Summer Tanager",
+        "scientific_name": "Piranga rubra"
+    },
+    {
+        "code4": "scta",
+        "code": "scatan",
+        "common_name": "Scarlet Tanager",
+        "scientific_name": "Piranga olivacea"
+    },
+    {
+        "code4": "weta",
+        "code": "westan",
+        "common_name": "Western Tanager",
+        "scientific_name": "Piranga ludoviciana"
+    },
+    {
+        "code4": "noca",
+        "code": "norcar",
+        "common_name": "Northern Cardinal",
+        "scientific_name": "Cardinalis cardinalis"
+    },
+    {
+        "code4": "rbgr",
+        "code": "robgro",
+        "common_name": "Rose-breasted Grosbeak",
+        "scientific_name": "Pheucticus ludovicianus"
+    },
+    {
+        "code4": "bhgr",
+        "code": "bkhgro",
+        "common_name": "Black-headed Grosbeak",
+        "scientific_name": "Pheucticus melanocephalus"
+    },
+    {
+        "code4": "blgr",
+        "code": "blugrb1",
+        "common_name": "Blue Grosbeak",
+        "scientific_name": "Passerina caerulea"
+    },
+    {
+        "code4": "inbu",
+        "code": "indbun",
+        "common_name": "Indigo Bunting",
+        "scientific_name": "Passerina cyanea"
+    },
+    {
+        "code4": "pabu",
+        "code": "paibun",
+        "common_name": "Painted Bunting",
+        "scientific_name": "Passerina ciris"
+    },
+    {
+        "code4": "dick",
+        "code": "dickci",
+        "common_name": "Dickcissel",
+        "scientific_name": "Spiza americana"
+    },
+    {
+        "code4": "safi",
+        "code": "saffin",
+        "common_name": "Saffron Finch",
+        "scientific_name": "Sicalis flaveola"
+    },
+    {
+        "code4": "rbse",
+        "code": "rubsee1",
+        "common_name": "Ruddy-breasted Seedeater",
+        "scientific_name": "Sporophila minuta"
+    },
+    {
+        "code4": "mose",
+        "code": "whcsee1",
+        "common_name": "Morelet's Seedeater",
+        "scientific_name": "Sporophila morelleti"
+    }
+]
