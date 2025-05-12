@@ -80,7 +80,7 @@
     }
   </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100" style="background-color: #fcfcf9;">
   <div id="app"></div>
 
   <script type="text/babel">
@@ -202,7 +202,7 @@
       if (isLoading) {
         return (
           <div className="max-w-md mx-auto bg-[#fcfcf9] min-h-screen">
-            <header className="bg-[#429492] text-white p-4 text-center">
+            <header className="text-white p-4 text-center" style={{ backgroundColor: '#429492' }}>
               <h1 className="text-xl font-bold">MRBA Composer</h1>
             </header>
             <main className="p-4 flex flex-col items-center justify-center" style={{ minHeight: 'calc(100vh - 64px)' }}>
@@ -217,7 +217,7 @@
       if (error) {
         return (
           <div className="max-w-md mx-auto bg-[#fcfcf9] min-h-screen">
-            <header className="bg-[#429492] text-white p-4 text-center">
+            <header className="text-white p-4 text-center" style={{ backgroundColor: '#429492' }}>
               <h1 className="text-xl font-bold">MRBA Composer</h1>
             </header>
             <main className="p-4">
@@ -288,7 +288,7 @@
 
       return (
         <div className="max-w-md mx-auto bg-[#fcfcf9] min-h-screen">
-          <header className="bg-[#429492] text-white p-4 text-center">
+          <header className="text-white p-4 text-center" style={{ backgroundColor: '#429492' }}>
             <h1 className="text-xl font-bold">MRBA Composer</h1>
           </header>
           <main className="p-4">
