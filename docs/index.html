@@ -969,11 +969,10 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
         let text = selectedSpecies.map(s => s.name).join(', ') + '\n';
         text += 'at ' + selectedLocation.name;
         
-        // Add map links if coordinates are available
+        // Add map link if coordinates are available (Google Maps only, no blank line)
         if (selectedLocation.latitude && selectedLocation.longitude) {
-          text += '\n\n';
-          text += `📍 [Google](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>) • `;
-          text += `📍 [Apple](http://maps.apple.com/?ll=${selectedLocation.latitude},${selectedLocation.longitude}&q=Dropped%20Pin)`;
+          text += '\n';
+          text += `📍 [MAP](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>)`;
         }
         
         setAlertText(text);
