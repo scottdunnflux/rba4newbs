@@ -972,7 +972,7 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
         // Add map link if coordinates are available (Google Maps only, no blank line)
         if (selectedLocation.latitude && selectedLocation.longitude) {
           text += '\n';
-          text += `📍 [MAP](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>)`;
+          text += `@Manhattan 📍 [MAP](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>)`;
         }
         
         setAlertText(text);
