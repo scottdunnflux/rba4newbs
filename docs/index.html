@@ -99,7 +99,7 @@
           try {
             // Add this right after the try block starts in the loadData function
             console.log('Attempting to load data from:', 
-              './data/nyc-species2.json',
+              './data/nyc-species.json',
               './data/common-birds.txt',
               './data/david-barret-hot-spots.json'
             );
@@ -132,10 +132,10 @@
             }
             
             // Fix the data loading function to properly fetch and use the species data
-            // Load bird species from nyc-species2.json
+            // Load bird species from nyc-species.json
             let birdSpecies = [];
             try {
-              const speciesResponse = await fetch('./data/nyc-species2.json');
+              const speciesResponse = await fetch('./data/nyc-species.json');
               if (!speciesResponse.ok) throw new Error('Failed to load bird species data');
               const speciesData = await speciesResponse.json();
               
@@ -226,13 +226,13 @@
                 <p>{error}</p>
                 <p className="mt-2">Please check that all data files are in the correct location:</p>
                 <ul className="list-disc ml-5 mt-2">
-                  <li>data/nyc-species2.json</li>
+                  <li>data/nyc-species.json</li>
                   <li>data/common-birds.txt</li>
                   <li>data/david-barret-hot-spots.json</li>
                 </ul>
                 <p className="mt-2">You can also try loading directly from:</p>
                 <a 
-                  href="https://scottdunnflux.github.io/rba4newbs/data/nyc-species2.json" 
+                  href="https://scottdunnflux.github.io/rba4newbs/data/nyc-species.json" 
                   target="_blank" 
                   className="text-blue-600 underline"
                 >
