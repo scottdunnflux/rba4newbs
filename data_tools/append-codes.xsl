@@ -11,7 +11,14 @@
          Input:  ../data_raw/nyc-species-raw.json  (from get-species.py)
          Output: stdout — redirect to ../docs/data/nyc-species.json (the file the app loads).
          Input and output are deliberately different files: re-running on an already-augmented
-         file would emit duplicate code4 keys. -->
+         file would emit duplicate code4 keys.
+
+         Prefer running the whole pipeline via data_tools/regenerate-species.sh. To run this
+         step by hand: the real data is pulled through unparsed-text(), but match="/" still
+         needs a context node, so pass any dummy source document with -s:. From data_tools/
+         ($SAXON_LIB/* pulls in Saxon-HE plus its xmlresolver companion jars):
+           java -cp "$SAXON_LIB/*" net.sf.saxon.Transform \
+                -xsl:append-codes.xsl -s:../docs/data/dummy.xml > /tmp/out.json -->
     <xsl:variable name="birdcodes" select="json-to-xml(unparsed-text('../docs/data/alpha_codes_from_excel.json'))"/>
     <xsl:template match="/">
     <xsl:variable name="nyc-species-with-code">        

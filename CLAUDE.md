@@ -53,14 +53,19 @@ These are what the running app actually loads:
 Offline, run manually when regenerating data — not part of the app. Source inputs live in
 `data_raw/` (KML/KMZ hotspot exports, eBird PDFs/spreadsheets), outputs go to `docs/data/`.
 
-The species-list flow is two stages:
+**To refresh the species list, run `data_tools/regenerate-species.sh`** — it runs both stages
+and pretty-prints the result. Set `SAXON_LIB` if Saxon-HE isn't at the script's default path;
+pass `--skip-pull` to re-augment the existing raw file without re-hitting eBird. Then review
+`git diff docs/data/nyc-species.json`. The two stages it wraps:
 1. `get-species.py` — pulls the NYC (US-NY-061) species list from the eBird API and prints raw
    JSON (`{ code, common_name, scientific_name }`) to stdout. Requires an eBird API token
    (`X-eBirdApiToken`). Run: `python data_tools/get-species.py US "New York" > data_raw/nyc-species-raw.json`
 2. `append-codes.xsl` — reads `data_raw/nyc-species-raw.json` + `alpha_codes_from_excel.json`,
    adds a `code4` per record, and prints the augmented JSON to stdout. Redirect it to
    `docs/data/nyc-species.json` (the app file). Input ≠ output on purpose: re-running on the
-   already-augmented file would emit duplicate `code4` keys.
+   already-augmented file would emit duplicate `code4` keys. Note the code4 match is by exact
+   `common_name`, so an eBird taxonomy rename drops the code until the new name is added to
+   `alpha_codes_from_excel.json` (as was done for Eastern Warbling Vireo, etc.).
 
 Other tools:
 - `kml-to-json.xsl` / `kml-to-csv.xsl` — XSLT 3.0 stylesheets converting hotspot KML to
