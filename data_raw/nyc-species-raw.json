@@ -60,9 +60,19 @@
     "scientific_name": "Anser anser x Branta canadensis"
   },
   {
+    "code": "x00759",
+    "common_name": "Domestic goose sp. x Canada Goose (hybrid)",
+    "scientific_name": "Anser sp. (Domestic type) x Branta canadensis"
+  },
+  {
     "code": "mutswa",
     "common_name": "Mute Swan",
     "scientific_name": "Cygnus olor"
+  },
+  {
+    "code": "truswa",
+    "common_name": "Trumpeter Swan",
+    "scientific_name": "Cygnus buccinator"
   },
   {
     "code": "tunswa",
@@ -180,6 +190,11 @@
     "scientific_name": "Somateria mollissima"
   },
   {
+    "code": "harduc",
+    "common_name": "Harlequin Duck",
+    "scientific_name": "Histrionicus histrionicus"
+  },
+  {
     "code": "sursco",
     "common_name": "Surf Scoter",
     "scientific_name": "Melanitta perspicillata"
@@ -267,7 +282,6 @@
   {
     "code": "rocpig",
     "common_name": "Rock Pigeon",
-    "alternative_names": ["Herring Gull (feral)"],
     "scientific_name": "Columba livia"
   },
   {
@@ -416,9 +430,9 @@
     "scientific_name": "Bartramia longicauda"
   },
   {
-    "code": "whimbr",
-    "common_name": "Whimbrel",
-    "scientific_name": "Numenius phaeopus"
+    "code": "whimbr3",
+    "common_name": "Hudsonian Whimbrel",
+    "scientific_name": "Numenius hudsonicus"
   },
   {
     "code": "hudgod",
@@ -566,6 +580,11 @@
     "scientific_name": "Alle alle"
   },
   {
+    "code": "litgul",
+    "common_name": "Little Gull",
+    "scientific_name": "Hydrocoloeus minutus"
+  },
+  {
     "code": "bklkit",
     "common_name": "Black-legged Kittiwake",
     "scientific_name": "Rissa tridactyla"
@@ -603,7 +622,6 @@
   {
     "code": "amhgul1",
     "common_name": "American Herring Gull",
-    "alternative_names": ["Herring Gull"],
     "scientific_name": "Larus smithsonianus"
   },
   {
@@ -1009,7 +1027,7 @@
   {
     "code": "haiwoo",
     "common_name": "Hairy Woodpecker",
-    "scientific_name": "Dryobates villosus"
+    "scientific_name": "Leuconotopicus villosus"
   },
   {
     "code": "pilwoo",
@@ -1060,6 +1078,11 @@
     "code": "whwpar",
     "common_name": "White-winged Parakeet",
     "scientific_name": "Brotogeris versicolurus"
+  },
+  {
+    "code": "sunpar1",
+    "common_name": "Sun Parakeet",
+    "scientific_name": "Aratinga solstitialis"
   },
   {
     "code": "mitpar",
@@ -1142,6 +1165,11 @@
     "scientific_name": "Tyrannus tyrannus"
   },
   {
+    "code": "fotfly",
+    "common_name": "Fork-tailed Flycatcher",
+    "scientific_name": "Tyrannus savana"
+  },
+  {
     "code": "whevir",
     "common_name": "White-eyed Vireo",
     "scientific_name": "Vireo griseus"
@@ -1167,8 +1195,8 @@
     "scientific_name": "Vireo philadelphicus"
   },
   {
-    "code": "warvir",
-    "common_name": "Warbling Vireo",
+    "code": "eawvir1",
+    "common_name": "Eastern Warbling Vireo",
     "scientific_name": "Vireo gilvus"
   },
   {
@@ -1267,6 +1295,11 @@
     "scientific_name": "Petrochelidon fulva"
   },
   {
+    "code": "arcwar1",
+    "common_name": "Arctic Warbler",
+    "scientific_name": "Phylloscopus borealis"
+  },
+  {
     "code": "ruckin",
     "common_name": "Ruby-crowned Kinglet",
     "scientific_name": "Corthylio calendula"
@@ -1299,7 +1332,6 @@
   {
     "code": "houwre",
     "common_name": "Northern House Wren",
-    "alternative_names": ["House Wren"],
     "scientific_name": "Troglodytes aedon"
   },
   {
@@ -1445,7 +1477,7 @@
   {
     "code": "evegro",
     "common_name": "Evening Grosbeak",
-    "scientific_name": "Coccothraustes vespertinus"
+    "scientific_name": "Hesperiphona vespertina"
   },
   {
     "code": "pingro",
@@ -1813,6 +1845,11 @@
     "scientific_name": "Geothlypis trichas"
   },
   {
+    "code": "x00749",
+    "common_name": "Mourning Warbler x Common Yellowthroat (hybrid)",
+    "scientific_name": "Geothlypis philadelphia x trichas"
+  },
+  {
     "code": "hoowar",
     "common_name": "Hooded Warbler",
     "scientific_name": "Setophaga citrina"
@@ -1858,9 +1895,9 @@
     "scientific_name": "Setophaga fusca"
   },
   {
-    "code": "yelwar",
-    "common_name": "Yellow Warbler",
-    "scientific_name": "Setophaga petechia"
+    "code": "yelwar1",
+    "common_name": "Northern Yellow Warbler",
+    "scientific_name": "Setophaga aestiva"
   },
   {
     "code": "chswar",
@@ -1906,6 +1943,11 @@
     "code": "btywar",
     "common_name": "Black-throated Gray Warbler",
     "scientific_name": "Setophaga nigrescens"
+  },
+  {
+    "code": "towwar",
+    "common_name": "Townsend's Warbler",
+    "scientific_name": "Setophaga townsendi"
   },
   {
     "code": "herwar",

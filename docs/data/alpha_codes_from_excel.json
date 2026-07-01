@@ -14050,7 +14050,7 @@
   },
   {
     "english_name": "Trumpeter Swan",
-    "four_letter_code": "TRUS*",
+    "four_letter_code": "TRUS",
     "scientific_name": "Cygnus buccinator",
     "six_letter_code": "CYGBUC",
     "non_species": true
@@ -16384,6 +16384,27 @@
     "four_letter_code": "ZSHY",
     "scientific_name": "Zonotrichia hybrid",
     "six_letter_code": "ZONHYB",
+    "non_species": true
+  },
+  {
+    "english_name": "Eastern Warbling Vireo",
+    "four_letter_code": "WAVI",
+    "scientific_name": "Vireo gilvus",
+    "six_letter_code": "VIRGIL",
+    "non_species": true
+  },
+  {
+    "english_name": "Hudsonian Whimbrel",
+    "four_letter_code": "WHIM",
+    "scientific_name": "Numenius hudsonicus",
+    "six_letter_code": "NUMHUD",
+    "non_species": true
+  },
+  {
+    "english_name": "Northern Yellow Warbler",
+    "four_letter_code": "YEWA",
+    "scientific_name": "Setophaga aestiva",
+    "six_letter_code": "SETAES",
     "non_species": true
   }
 ]
