@@ -84,6 +84,22 @@
   <div id="app"></div>
 
   <script type="text/babel">
+    // David Barrett's Manhattan hotspot My Maps list
+    const HOTSPOT_MAP_MID = '15NWcsQyX3a96yfnwEGsqwSVwMHA';
+    const HOTSPOT_LIST_URL = `https://www.google.com/maps/d/viewer?mid=${HOTSPOT_MAP_MID}&usp=sharing`;
+
+    // Shared hotspot search: split query on whitespace/hyphens; every token must be a
+    // prefix of some word in the hotspot name. Used by the finder and the Location step.
+    function filterHotspots(hotspots, query, limit = 10) {
+      const arr = Array.isArray(hotspots) ? hotspots : [];
+      const tokens = (query || '').toLowerCase().split(/[\s-]+/).filter(Boolean);
+      if (tokens.length === 0) return [];
+      return arr.filter(h => {
+        const words = (h.name || '').toLowerCase().split(/[\s-]+/).filter(Boolean);
+        return tokens.every(t => words.some(w => w.startsWith(t)));
+      }).slice(0, limit);
+    }
+
     // Data loading hook
     function useDataLoader() {
       const [dataState, setDataState] = React.useState({
@@ -188,15 +204,17 @@
 
     // Main App Component
     function App() {
-      const [currentPage, setCurrentPage] = React.useState('species');
+      const [currentPage, setCurrentPage] = React.useState('home');
       const [selectedSpecies, setSelectedSpecies] = React.useState([]);
       const [selectedLocation, setSelectedLocation] = React.useState(null);
       const { birdSpecies, commonBirds, hotspots, isLoading, error } = useDataLoader();
 
       // Navigation functions
+      const goToHome = () => setCurrentPage('home');
       const goToSpeciesPage = () => setCurrentPage('species');
       const goToLocationPage = () => setCurrentPage('location');
       const goToAlertPage = () => setCurrentPage('alert');
+      const goToHotspotPage = () => setCurrentPage('hotspot');
 
       // Loading screen
       if (isLoading) {
@@ -253,6 +271,20 @@
       // Render the current page
       const renderPage = () => {
         switch(currentPage) {
+          case 'home':
+            return (
+              <HomePage
+                onComposeAlert={goToSpeciesPage}
+                onFindHotspot={goToHotspotPage}
+              />
+            );
+          case 'hotspot':
+            return (
+              <HotspotFinderPage
+                hotspots={hotspots || []}
+                onBack={goToHome}
+              />
+            );
           case 'species':
             return (
               <SpeciesPage 
@@ -465,27 +497,7 @@
           return;
         }
 
-        // Split search text into tokens (words)
-        const searchTokens = searchText.toLowerCase().split(/[\s-]+/).filter(token => token.length > 0);
-        
-        // Function to check if a location name matches all search tokens
-        const matchesAllTokens = (locationName) => {
-          const locationTokens = locationName.toLowerCase().split(/[\s-]+/).filter(token => token.length > 0);
-          
-          // Check if each search token is a prefix of any location token
-          return searchTokens.every(searchToken => 
-            locationTokens.some(locationToken => locationToken.startsWith(searchToken))
-          );
-        };
-        
-        // Ensure hotspots is an array before filtering
-        const hotspotsArray = Array.isArray(hotspots) ? hotspots : [];
-        
-        const results = hotspotsArray
-          .filter(hotspot => matchesAllTokens(hotspot.name))
-          .slice(0, 10); // Limit to 10 results
-
-        setSearchResults(results);
+        setSearchResults(filterHotspots(hotspots, searchText));
       }, [searchText, hotspots]);
 
       // Select a hotspot
@@ -1076,6 +1088,177 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
             onClick={onBack}
           >
             Back to Location
+          </button>
+        </div>
+      );
+    }
+
+    // Home Page Component
+    function HomePage({ onComposeAlert, onFindHotspot }) {
+      return (
+        <div>
+          <h2 className="text-xl font-semibold mb-2">Welcome</h2>
+          <p className="text-gray-600 mb-6">What would you like to do?</p>
+
+          <div className="space-y-3">
+            <button className="ios-button w-full py-4 text-lg" onClick={onComposeAlert}>
+              Compose an Alert
+            </button>
+            <p className="text-sm text-gray-500 px-1">
+              Build a rare bird alert message and get the right Discord channel.
+            </p>
+
+            <button className="ios-button outline w-full py-4 text-lg mt-2" onClick={onFindHotspot}>
+              Find a Hotspot
+            </button>
+            <p className="text-sm text-gray-500 px-1">
+              Look up a hotspot name and get a map pin to navigate or share.
+            </p>
+          </div>
+
+          <p className="text-xs text-gray-400 mt-8 text-center">
+            Hotspot locations maintained by David Barrett.{' '}
+            <a href={HOTSPOT_LIST_URL} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+              View the full list
+            </a>
+          </p>
+        </div>
+      );
+    }
+
+    // Hotspot Finder Page Component
+    function HotspotFinderPage({ hotspots = [], onBack }) {
+      const [searchText, setSearchText] = React.useState('');
+      const [searchResults, setSearchResults] = React.useState([]);
+      const [selectedHotspot, setSelectedHotspot] = React.useState(null);
+      const [copied, setCopied] = React.useState(false);
+
+      React.useEffect(() => {
+        if (!searchText || searchText.length < 2) {
+          setSearchResults([]);
+          return;
+        }
+        setSearchResults(filterHotspots(hotspots, searchText));
+      }, [searchText, hotspots]);
+
+      const selectHotspot = (hotspot) => {
+        setSelectedHotspot(hotspot);
+        setSearchText('');
+        setSearchResults([]);
+        setCopied(false);
+      };
+
+      const clearSelection = () => {
+        setSelectedHotspot(null);
+        setSearchText('');
+      };
+
+      // Show the "no matches" hint only for a real query with zero hits and no selection.
+      const showNoMatches =
+        !selectedHotspot && searchText.length >= 2 && searchResults.length === 0;
+
+      const pinUrl = selectedHotspot
+        ? `https://maps.google.com/?q=${selectedHotspot.lat},${selectedHotspot.lon}`
+        : '';
+      const davidMapUrl = selectedHotspot
+        ? `https://www.google.com/maps/d/viewer?mid=${HOTSPOT_MAP_MID}&ll=${selectedHotspot.lat},${selectedHotspot.lon}&z=17`
+        : '';
+
+      const copyDirections = () => {
+        if (!selectedHotspot) return;
+        const text = `${selectedHotspot.name}\n📍 ${pinUrl}`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      };
+
+      return (
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Find a Hotspot</h2>
+
+          <div className="mb-4">
+            <input
+              type="text"
+              className="ios-input"
+              placeholder="Type a hotspot name..."
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+          </div>
+
+          {searchResults.length > 0 && (
+            <div className="ios-card mb-4">
+              {searchResults.map((result, index) => (
+                <div
+                  key={index}
+                  className="ios-list-item cursor-pointer hover:bg-gray-50"
+                  onClick={() => selectHotspot(result)}
+                >
+                  <div>{result.name}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {showNoMatches && (
+            <div className="ios-card p-4 mb-4">
+              <p className="text-sm text-gray-600 mb-2">
+                No matching hotspot found. You can browse David's full list:
+              </p>
+              <a
+                href={HOTSPOT_LIST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                Open David Barrett's hotspot list
+              </a>
+            </div>
+          )}
+
+          {selectedHotspot && (
+            <div className="ios-card p-4 mb-4">
+              <h3 className="text-lg font-medium mb-3">{selectedHotspot.name}</h3>
+
+              <div className="space-y-2">
+                <a
+                  href={pinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ios-button w-full block text-center"
+                >
+                  Open in Google Maps
+                </a>
+
+                <a
+                  href={davidMapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ios-button outline w-full block text-center"
+                >
+                  View on David's map
+                </a>
+
+                <button className="ios-button outline w-full" onClick={copyDirections}>
+                  {copied ? 'Copied!' : 'Copy directions text'}
+                </button>
+              </div>
+
+              <button className="ios-button outline w-full mt-3" onClick={clearSelection}>
+                Search Another
+              </button>
+            </div>
+          )}
+
+          <p className="text-xs text-gray-400 mt-6 mb-4 text-center">
+            Hotspot locations maintained by David Barrett.{' '}
+            <a href={HOTSPOT_LIST_URL} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+              View the full list
+            </a>
+          </p>
+
+          <button className="ios-button outline w-full" onClick={onBack}>
+            Back to Home
           </button>
         </div>
       );
