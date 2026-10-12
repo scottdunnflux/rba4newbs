@@ -100,6 +100,28 @@
       }).slice(0, limit);
     }
 
+    // Hotspot data uses string lat/lon; the rest of the app expects numeric latitude/longitude.
+    function normalizeHotspot(h) {
+      return {
+        ...h,
+        latitude: parseFloat(h.latitude ?? h.lat),
+        longitude: parseFloat(h.longitude ?? h.lon)
+      };
+    }
+
+    // Haversine distance in km
+    function calculateDistance(lat1, lon1, lat2, lon2) {
+      const deg2rad = (deg) => deg * (Math.PI / 180);
+      const R = 6371;
+      const dLat = deg2rad(lat2 - lat1);
+      const dLon = deg2rad(lon2 - lon1);
+      const a =
+        Math.sin(dLat/2) * Math.sin(dLat/2) +
+        Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+        Math.sin(dLon/2) * Math.sin(dLon/2);
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    }
+
     // Data loading hook
     function useDataLoader() {
       const [dataState, setDataState] = React.useState({
@@ -500,11 +522,24 @@
         setSearchResults(filterHotspots(hotspots, searchText));
       }, [searchText, hotspots]);
 
-      // Select a hotspot
+      // Select a hotspot: name it, but don't pin yet. The user chooses between
+      // pinning their own location (default) or the hotspot center.
       const selectHotspot = (hotspot) => {
-        setSelectedLocation(hotspot);
+        const hs = normalizeHotspot(hotspot);
+        setSelectedLocation({ name: hs.name, hotspot: hs });
         setSearchText('');
         setSearchResults([]);
+      };
+
+      // Pin the hotspot's center point (not where the bird is)
+      const useHotspotPin = () => {
+        const hs = selectedLocation.hotspot;
+        setSelectedLocation({
+          ...selectedLocation,
+          latitude: hs.latitude,
+          longitude: hs.longitude,
+          pinType: 'hotspot'
+        });
       };
 
       // Handle manual location entry
@@ -540,20 +575,10 @@
             
             // Calculate distance for each hotspot
             const hotspotsWithDistance = hotspotsArray.map(hotspot => {
-              // Handle different property names (lat/lon vs latitude/longitude)
-              const hotspotLat = parseFloat(hotspot.latitude || hotspot.lat);
-              const hotspotLon = parseFloat(hotspot.longitude || hotspot.lon);
-              
-              const distance = calculateDistance(
-                userLat, userLon, 
-                hotspotLat, hotspotLon
-              );
-              return { 
-                ...hotspot, 
-                distance,
-                // Ensure consistent property names
-                latitude: hotspotLat,
-                longitude: hotspotLon
+              const hs = normalizeHotspot(hotspot);
+              return {
+                ...hs,
+                distance: calculateDistance(userLat, userLon, hs.latitude, hs.longitude)
               };
             });
             
@@ -604,38 +629,39 @@
         );
       };
 
+      // Reopen the map on an existing "my location" pin, else start from GPS
+      const openPinMap = () => {
+        if (selectedLocation?.pinType === 'mine') {
+          setMapInitialCoords({
+            lat: selectedLocation.latitude,
+            lng: selectedLocation.longitude,
+            locationName: selectedLocation.name
+          });
+          setShowMap(true);
+        } else {
+          openMapWithCurrentLocation();
+        }
+      };
+
       // Handle accepting location from map
       const handleAcceptMapLocation = (location) => {
-        setSelectedLocation(location);
-        setShowMap(false);
-        
-        // Preserve the location name in the search text
-        if (location.name !== "Custom Pin Location") {
-          setSearchText(location.name);
+        const hotspot = selectedLocation?.hotspot;
+        if (hotspot) {
+          // Keep the hotspot so the user can still switch to the hotspot-center pin
+          setSelectedLocation({ ...location, hotspot, pinType: 'mine' });
+        } else {
+          setSelectedLocation({ ...location, pinType: 'mine' });
+          // Preserve the location name in the search text
+          if (location.name !== "Custom Pin Location") {
+            setSearchText(location.name);
+          }
         }
+        setShowMap(false);
       };
 
       // Handle canceling map selection
       const handleCancelMap = () => {
         setShowMap(false);
-      };
-
-      // Calculate distance between two points
-      const calculateDistance = (lat1, lon1, lat2, lon2) => {
-        const R = 6371; // Radius of the earth in km
-        const dLat = deg2rad(lat2 - lat1);
-        const dLon = deg2rad(lon2 - lon1);
-        const a = 
-          Math.sin(dLat/2) * Math.sin(dLat/2) +
-          Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
-          Math.sin(dLon/2) * Math.sin(dLon/2);
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-        const distance = R * c; // Distance in km
-        return distance;
-      };
-
-      const deg2rad = (deg) => {
-        return deg * (Math.PI/180);
       };
 
       // Clear selected location
@@ -651,6 +677,7 @@
             initialLat={mapInitialCoords?.lat}
             initialLng={mapInitialCoords?.lng}
             initialLocationName={mapInitialCoords?.locationName}
+            referencePoint={selectedLocation?.hotspot}
             onAcceptLocation={handleAcceptMapLocation}
             onCancel={handleCancelMap}
           />
@@ -729,7 +756,35 @@
                   Coordinates: {selectedLocation.latitude.toFixed(4)}, {selectedLocation.longitude.toFixed(4)}
                 </p>
               )}
-              <button 
+              {selectedLocation.hotspot && (
+                <div className="mt-3">
+                  <p className="text-sm font-medium mb-2">
+                    {selectedLocation.pinType === 'mine' && 'Pinned: your location'}
+                    {selectedLocation.pinType === 'hotspot' && 'Pinned: hotspot, not bird'}
+                    {!selectedLocation.pinType && 'No map pin yet'}
+                  </p>
+                  <button
+                    className="ios-button w-full"
+                    onClick={openPinMap}
+                  >
+                    {selectedLocation.pinType === 'mine' ? 'Adjust My Pin' : 'Pin My Location'}
+                  </button>
+                  {selectedLocation.pinType !== 'hotspot' && (
+                    <>
+                      <button
+                        className="ios-button outline w-full mt-2"
+                        onClick={useHotspotPin}
+                      >
+                        Use Hotspot Center Pin
+                      </button>
+                      <p className="text-xs text-gray-500 mt-1">
+                        Pins the middle of the hotspot, not where the bird is.
+                      </p>
+                    </>
+                  )}
+                </div>
+              )}
+              <button
                 className="ios-button outline mt-2"
                 onClick={clearLocation}
               >
@@ -759,7 +814,7 @@
     }
 
     // LocationMap Component
-function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLocation, onCancel }) {
+function LocationMap({ initialLat, initialLng, initialLocationName, referencePoint, onAcceptLocation, onCancel }) {
   const mapRef = React.useRef(null);
   const [map, setMap] = React.useState(null);
   const [marker, setMarker] = React.useState(null);
@@ -899,6 +954,11 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
     }
   };
 
+  // How far the pin is from the selected hotspot (if any), to catch posting from elsewhere
+  const kmFromHotspot = referencePoint
+    ? calculateDistance(currentPosition.lat, currentPosition.lng, referencePoint.latitude, referencePoint.longitude)
+    : null;
+
   // Handle accepting the location
   const handleAcceptLocation = () => {
     onAcceptLocation({
@@ -943,7 +1003,14 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
         <p className="text-sm text-gray-600">
           Drag the pin or tap on the map to set the exact bird location.
         </p>
-        
+
+        {kmFromHotspot > 0.5 && (
+          <div className="bg-yellow-100 text-yellow-800 p-3 rounded-lg text-sm">
+            This pin is {kmFromHotspot.toFixed(1)} km from {referencePoint.name}. Drag the pin to
+            where the bird is, or cancel and use the hotspot center pin instead.
+          </div>
+        )}
+
         <div className="flex space-x-2">
           <button 
             className="ios-button outline flex-1"
@@ -982,9 +1049,12 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
         text += 'at ' + selectedLocation.name;
         
         // Add map link if coordinates are available (Google Maps only, no blank line)
+        // A hotspot-center pin is labeled so birders don't go to the pin instead of the bird
+        const isHotspotPin = selectedLocation.pinType === 'hotspot';
         if (selectedLocation.latitude && selectedLocation.longitude) {
+          const mapLabel = isHotspotPin ? 'Hotspot pin, not bird' : 'MAP';
           text += '\n';
-          text += `@Manhattan 📍 [MAP](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>)`;
+          text += `@Manhattan 📍 [${mapLabel}](<https://maps.google.com/?q=${selectedLocation.latitude},${selectedLocation.longitude}>)`;
         }
         
         setAlertText(text);
@@ -997,6 +1067,7 @@ function LocationMap({ initialLat, initialLng, initialLocationName, onAcceptLoca
         let twitterText = selectedSpecies.map(s => s.name).join(', ') + ' at ' + selectedLocation.name;
         if (selectedLocation.latitude && selectedLocation.longitude) {
           twitterText += '\n\nhttps://maps.google.com/?q=' + selectedLocation.latitude + ',' + selectedLocation.longitude;
+          if (isHotspotPin) twitterText += '\n(Hotspot pin, not bird)';
         }
         setTwitterAlertText(twitterText);
         
