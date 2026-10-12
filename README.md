@@ -10,7 +10,7 @@ This tool flags common species so sightings of common birds don't end up on the 
 
 The list of Hot Spots in Central Park is extensive, and not everyone has the entire list memorized. This tool knows the proper name and location of every Hot Spot and will help ensure that birders enter the correct name and identify the correct location.
 
-The tool also makes it easy to mark a location with a pin. This can help with larger hot spots or with locations that fall outside of a hot spot or outside of Central Park.
+The tool also makes it easy to mark a location with a pin. Many hot spots are large, and a pin in the middle of one can send birders to the wrong place. So when you pick a hot spot, the tool names the hot spot but pins where you are. You can then drag the pin to where the bird is. Pins also help with locations outside a hot spot or outside Central Park.
 
 ## How does it work?
 Click the link at the end of this list to open the Manhattan Bird Alert Assistant web page.
@@ -31,10 +31,16 @@ Once on that page:
    - Enter a custom location or map URL
    - Use Set Map Pin button to create a custom pin
 5. If you picked a hotspot, choose a map pin:
-   - "Pin My Location" (best): opens a map on your position. Drag the pin to where the bird is.
-   - "Use Hotspot Center Pin": pins the middle of the hotspot. The alert labels it
-     "Hotspot pin, not bird".
-   - Or skip the pin.
+   - **"Pin My Location" (best):** a map opens on your position, labeled with the hotspot name.
+     Drag the pin or tap the map to mark where the bird is, then tap "Accept Location (Pin)".
+     Tap "Adjust My Pin" to move it later.
+     If the pin is more than half a kilometer from the hotspot, a yellow note appears. This
+     usually means you're no longer near the bird, so drag the pin to the right spot or use the
+     hotspot pin instead.
+   - **"Use Hotspot Center Pin":** pins the middle of the hotspot. Use this when you can't pin
+     the bird itself. The alert labels the link "Hotspot pin, not bird" so no one mistakes it
+     for the bird's exact spot.
+   - **No pin:** the alert names the hotspot without a map link.
 6. Copy the generated alert text which will include pin URLs
 7. Tap the appropriate Discord channel link to open Discord
 8. Paste the alert text and customize further if necessary
