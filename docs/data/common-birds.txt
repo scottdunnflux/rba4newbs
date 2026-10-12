@@ -12,7 +12,7 @@ Ruddy Duck
 Wood Duck
 Pied-billed Grebe
 Mourning Dove
-Rock Pigeon (feral)
+Rock Pigeon
 Black-billed Cuckoo
 Yellow-billed Cuckoo
 Common Nighthawk
@@ -26,7 +26,7 @@ Semipalmated Sandpiper
 Solitary Sandpiper
 Spotted Sandpiper
 Great Black-backed Gull
-Herring Gull
+American Herring Gull
 Laughing Gull
 Ring-billed Gull
 Common Tern
@@ -65,7 +65,7 @@ Least Flycatcher
 Yellow-bellied Flycatcher
 Blue-headed Vireo
 Red-eyed Vireo
-Warbling Vireo
+Eastern Warbling Vireo
 Yellow-throated Vireo
 American Crow
 Blue Jay
@@ -84,7 +84,7 @@ Brown Creeper
 Blue-gray Gnatcatcher
 Carolina Wren
 Winter Wren
-House Wren
+Northern House Wren
 European Starling
 American Robin
 Gray-cheeked Thrush
@@ -138,7 +138,7 @@ Prairie Warbler
 Tennessee Warbler
 Wilson's Warbler
 Worm-eating Warbler
-Yellow Warbler
+Northern Yellow Warbler
 Yellow-rumped Warbler
 Indigo Bunting
 Northern Cardinal
