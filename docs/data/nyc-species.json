@@ -468,6 +468,12 @@
         "scientific_name": "Porphyrio martinica"
     },
     {
+        "code4": "yera",
+        "code": "yelrai",
+        "common_name": "Yellow Rail",
+        "scientific_name": "Coturnicops noveboracensis"
+    },
+    {
         "code4": "sacr",
         "code": "sancra",
         "common_name": "Sandhill Crane",

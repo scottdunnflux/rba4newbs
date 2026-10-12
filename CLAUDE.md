@@ -50,7 +50,8 @@ These are what the running app actually loads:
 
 ## Data pipeline (`data_tools/`)
 
-Offline, run manually when regenerating data — not part of the app. Source inputs live in
+Offline, run manually when regenerating data — not part of the app. Step-by-step refresh notes for every
+data file (species, common birds, hotspots, alpha codes) are in `data_tools/README.md`. Source inputs live in
 `data_raw/` (KML/KMZ hotspot exports, eBird PDFs/spreadsheets), outputs go to `docs/data/`.
 
 **To refresh the species list, run `data_tools/regenerate-species.sh`** — it runs both stages

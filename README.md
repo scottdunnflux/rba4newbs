@@ -30,8 +30,16 @@ Once on that page:
    - Use "Near Me" to find nearby hotspots
    - Enter a custom location or map URL
    - Use Set Map Pin button to create a custom pin
-5. Copy the generated alert text which will include pin URLs
-6. Tap the appropriate Discord channel link to open Discord
-7. Paste the alert text and customize further if necessary
+5. If you picked a hotspot, choose a map pin:
+   - "Pin My Location" (best): opens a map on your position. Drag the pin to where the bird is.
+   - "Use Hotspot Center Pin": pins the middle of the hotspot. The alert labels it
+     "Hotspot pin, not bird".
+   - Or skip the pin.
+6. Copy the generated alert text which will include pin URLs
+7. Tap the appropriate Discord channel link to open Discord
+8. Paste the alert text and customize further if necessary
 
 [Manhattan Bird Alert Assistant](https://scottdunnflux.github.io/rba4newbs/)
+
+## Maintainers
+To update the species, common-bird, or hotspot lists, see [data_tools/README.md](data_tools/README.md).
